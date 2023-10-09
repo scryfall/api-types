@@ -1,0 +1,19 @@
+{
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.rulers": [140],
+    "[json]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescript]": {
+      "editor.formatOnSave": true
+    },
+    "files.exclude": {
+      "node_modules": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  }

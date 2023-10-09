@@ -1,0 +1,25 @@
+{
+  "name": "api-types",
+  "version": "1.0.0",
+  "description": "Type definitions for the Scryfall API",
+  "main": "index.d.ts",
+  "scripts": {
+    "test": "tsc -p tsconfig.test.json --noEmit --isolatedModules "
+  },
+  "keywords": [
+    "scryfall",
+    "api",
+    "types",
+    "typescript"
+  ],
+  "author": "Sammy",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}

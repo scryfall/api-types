@@ -1,0 +1,17 @@
+{
+	"Enumlike": {
+		"scope": "typescript",
+		"prefix": "enumlike",
+		"body": [
+			"export type $1Like = $1 | `${$1}`;",
+		],
+		"description": "Create an enum-like field corresponding to the values of a string enum."
+	},
+	"New Scryfall object declaration": {
+		"scope": "typescript",
+		"prefix": "scryfall:object",
+		"body": [
+			"ScryfallObject.Object<ScryfallObject.ObjectType.$1>"
+		]
+	}
+}
