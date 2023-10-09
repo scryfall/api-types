@@ -1,4 +1,4 @@
-import { ScryfallObject } from "../../ScryfallObject";
+import { ScryfallObject } from "../ScryfallObject";
 import { IsoDate, Uuid } from "../../internal/values";
 
 export type ScryfallRuling = ScryfallObject.Object<ScryfallObject.ObjectType.Ruling> & {

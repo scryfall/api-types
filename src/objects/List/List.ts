@@ -1,4 +1,4 @@
-import { ScryfallObject } from "../../ScryfallObject";
+import { ScryfallObject } from "../ScryfallObject";
 import { Integer, Uri } from "../../internal/values";
 import { ScryfallCard } from "../Card";
 import { ScryfallMigration } from "../Migration";

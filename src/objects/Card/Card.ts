@@ -1,4 +1,4 @@
-import { ScryfallObject } from "../../ScryfallObject";
+import { ScryfallObject } from "../ScryfallObject";
 import { ScryfallCardLayout } from "./values/CardLayout";
 import { ScryfallCardFace } from "./CardFace";
 import { ScryfallCardFields } from "./CardFields";

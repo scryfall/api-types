@@ -1,4 +1,4 @@
-import { ScryfallObject } from "../../ScryfallObject";
+import { ScryfallObject } from "../ScryfallObject";
 import { ScryfallCardFields } from "./CardFields";
 
 export namespace ScryfallCardFace {
