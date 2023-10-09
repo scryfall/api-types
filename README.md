@@ -14,7 +14,7 @@ Enum fields are always defined in two ways: as the Enum, and as an Enum-like str
 
 ## Using this as a dependency for your library
 
-There's essentially three ways you might use this project:
+There's essentially two main ways you might use this project:
 
 - Your own independent project that nobody will be installing as a dependency.
 - Your own library that requires this as a dependency, and which others will install.
@@ -36,7 +36,8 @@ In the second case however, we advise you require a given major version of this 
   name: "mylibrary",
   peerDependencies: {
     // The major version others should use.
-    "@scryfall/api-types": "1.x",
+    // Optionally include a minor version minimum.
+    "@scryfall/api-types": "1.x >=1.2",
   },
   devDependencies: {
     // The version you use for your work.
