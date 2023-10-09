@@ -9,7 +9,7 @@ export type ScryfallRuling = ScryfallObject.Object<ScryfallObject.ObjectType.Rul
   /**
    * A computer-readable string indicating which company produced this ruling, either `wotc` or `scryfall`
    */
-  source: string;
+  source: "wotc" | "scryfall";
   /**
    * The date when the ruling or note was published
    */
