@@ -121,6 +121,3 @@ export namespace ScryfallCard {
     | ArtSeries
     | ReversibleCard;
 }
-
-// TODO handle lang=en -> guaranteed no localisation
-// TODO handle image_status=missing -> guaranteed no art info
