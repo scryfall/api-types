@@ -282,7 +282,7 @@ export namespace ScryfallCardFields.Print {
     promo: boolean;
     /** An array of strings describing what categories of promo cards this card falls into. */
     promo_types?: ScryfallPromoType[];
-    /** An object providing URIs to this card’s listing on major marketplaces. Omitted for unpurchaseable cards on Arena. */
+    /** An object providing URIs to this card’s listing on major marketplaces.  Omitted if the card is unpurchaseable. */
     purchase_uris?: PurchaseUris;
     /** This card’s rarity. */
     rarity: ScryfallRarityLike;
