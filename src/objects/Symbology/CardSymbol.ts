@@ -1,5 +1,5 @@
 import { ScryfallObject } from "../Object";
-import { Decimal, Uri } from "../../internal/values";
+import { Decimal, Uri } from "../../internal";
 import { ScryfallColors } from "../Card/values";
 
 export type ScryfallCardSymbol = ScryfallObject.Object<ScryfallObject.ObjectType.CardSymbol> & {

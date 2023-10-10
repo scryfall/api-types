@@ -1,5 +1,5 @@
 import { ScryfallObject } from "../Object";
-import { Uri, Integer } from "../../internal/values";
+import { Uri, Integer } from "../../internal";
 
 export type ScryfallCatalog = ScryfallObject.Object<ScryfallObject.ObjectType.Catalog> & {
   /** A link to the current catalog on Scryfall’s API */

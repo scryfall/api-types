@@ -16,7 +16,7 @@ import {
   ScryfallSecurityStampLike,
 } from "./values";
 import { ScryfallCardFace } from "./CardFace";
-import { Uuid, Uri, Integer, Decimal, IsoDate } from "../../internal/values";
+import { Uuid, Uri, Integer, Decimal, IsoDate } from "../../internal";
 import { SetTypeLike } from "../Set/values";
 import { ScryfallRelatedCard } from "./RelatedCard";
 
