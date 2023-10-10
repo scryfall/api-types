@@ -4,7 +4,9 @@
   "description": "Type definitions for the Scryfall API",
   "main": "index.d.ts",
   "scripts": {
-    "test": "tsc -p tsconfig.test.json --noEmit --isolatedModules "
+    "test": "npm run test:lib && npm run test:tests",
+    "test:lib": "tsc -p tsconfig.lib.json --noEmit",
+    "test:tests": "tsc -p tsconfig.test.json --noEmit --isolatedModules"
   },
   "keywords": [
     "scryfall",
