@@ -1,4 +1,4 @@
-import { ScryfallObject } from "../ScryfallObject";
+import { ScryfallObject } from "../Object";
 import { Decimal } from "../../internal/values";
 import { ScryfallColors } from "../Card/values";
 

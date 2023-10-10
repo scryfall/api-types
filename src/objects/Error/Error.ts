@@ -1,4 +1,4 @@
-import { ScryfallObject } from "../ScryfallObject";
+import { ScryfallObject } from "../Object";
 import { Integer } from "../../internal/values";
 
 export type ScryfallError = ScryfallObject.Object<ScryfallObject.ObjectType.Error> & {

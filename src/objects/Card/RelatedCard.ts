@@ -1,4 +1,4 @@
-import { ScryfallObject } from "../ScryfallObject";
+import { ScryfallObject } from "../Object";
 import { Uri, Uuid } from "../../internal/values";
 
 export type ScryfallRelatedCard = ScryfallObject.Object<ScryfallObject.ObjectType.RelatedCard> & {

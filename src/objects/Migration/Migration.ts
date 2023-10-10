@@ -1,4 +1,4 @@
-import { ScryfallObject } from "../ScryfallObject";
+import { ScryfallObject } from "../Object";
 import { Uri, Uuid, IsoDate } from "../../internal/values";
 
 export enum ScryfallMigrationStrategy {

@@ -1,4 +1,4 @@
-import { ScryfallObject } from "../ScryfallObject";
+import { ScryfallObject } from "../Object";
 import { Uuid, Integer, Uri, IsoDate } from "../../internal/values";
 import { SetTypeLike } from "./values";
 

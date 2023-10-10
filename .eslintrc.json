@@ -14,7 +14,7 @@
     },
     {
       "files": [
-        "src/**/__test__/**/*.ts"
+        "**/__test__/**/*.ts"
       ],
       "rules": {
         "@typescript-eslint/no-unused-vars": "off"
