@@ -1,4 +1,4 @@
-export enum ScryfallCardLayout {
+export enum ScryfallLayout {
   /** A standard Magic card with one face */
   Normal = "normal",
   /** A split-faced card */
@@ -47,4 +47,42 @@ export enum ScryfallCardLayout {
   ReversibleCard = "reversible_card",
 }
 
-export type ScryfallCardLayoutLike = ScryfallCardLayout | `${ScryfallCardLayout}`;
+export type ScryfallLayoutLike = ScryfallLayout | `${ScryfallLayout}`;
+
+export namespace ScryfallLayoutGroup {
+  export type SingleFaceType =
+    | ScryfallLayout.Normal
+    | ScryfallLayout.Meld
+    | ScryfallLayout.Leveler
+    | ScryfallLayout.Class
+    | ScryfallLayout.Saga
+    | ScryfallLayout.Mutate
+    | ScryfallLayout.Prototype
+    | ScryfallLayout.Battle
+    | ScryfallLayout.Planar
+    | ScryfallLayout.Scheme
+    | ScryfallLayout.Vanguard
+    | ScryfallLayout.Token
+    | ScryfallLayout.Emblem
+    | ScryfallLayout.Augment
+    | ScryfallLayout.Host;
+
+  export type MultiFaceType =
+    | ScryfallLayout.Split
+    | ScryfallLayout.Flip
+    | ScryfallLayout.Adventure
+    | ScryfallLayout.Transform
+    | ScryfallLayout.ModalDfc
+    | ScryfallLayout.DoubleFacedToken
+    | ScryfallLayout.ArtSeries
+    | ScryfallLayout.ReversibleCard;
+
+  export type SingleSidedSplitType = ScryfallLayout.Split | ScryfallLayout.Flip | ScryfallLayout.Adventure;
+
+  export type DoubleSidedSplitType =
+    | ScryfallLayout.Transform
+    | ScryfallLayout.ModalDfc
+    | ScryfallLayout.DoubleFacedToken
+    | ScryfallLayout.ArtSeries
+    | ScryfallLayout.ReversibleCard;
+}

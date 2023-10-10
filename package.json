@@ -1,8 +1,8 @@
 {
-  "name": "api-types",
-  "version": "1.0.0",
+  "name": "@scryfall/api-types",
+  "version": "0.0.1-rc.0",
   "description": "Type definitions for the Scryfall API",
-  "main": "index.d.ts",
+  "main": "index.ts",
   "scripts": {
     "test": "npm run test:lib && npm run test:tests",
     "test:lib": "tsc -p tsconfig.lib.json --noEmit",
@@ -14,7 +14,7 @@
     "types",
     "typescript"
   ],
-  "author": "Sammy",
+  "author": "scarletcs",
   "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.4",

@@ -1,5 +1,4 @@
 export * from "./BorderColor";
-export * from "./CardLayout";
 export * from "./Color";
 export * from "./Finishes";
 export * from "./Frame";
@@ -9,6 +8,7 @@ export * from "./ImageSize";
 export * from "./ImageStatus";
 export * from "./Format";
 export * from "./LanguageCode";
+export * from "./Layout";
 export * from "./Legality";
 export * from "./PrintAttribute";
 export * from "./Rarity";

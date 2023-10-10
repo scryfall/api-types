@@ -2,7 +2,7 @@ import {
   ScryfallFormat,
   ScryfallLegalityLike,
   ScryfallLanguageCodeLike,
-  ScryfallCardLayoutLike,
+  ScryfallLayoutLike,
   ScryfallColors,
   ScryfallImageSize,
   ScryfallBorderColorLike,
@@ -33,7 +33,7 @@ export namespace ScryfallCardFields.Core {
     /** A language code for this printing. */
     lang: ScryfallLanguageCodeLike;
     /** A code for this card’s layout. */
-    layout: ScryfallCardLayoutLike;
+    layout: ScryfallLayoutLike;
     /** A link to where you can begin paginating all re/prints for this card on Scryfall’s API. */
     prints_search_uri: Uri;
     /** A link to this card’s rulings list on Scryfall’s API. */

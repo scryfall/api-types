@@ -1,10 +1,17 @@
 # Scryfall API types
 
-This library documents the definitive comprehensive typings of the Scryfall API for use in Typescript & Javascript projects.
+This library documents the definitive comprehensive typings of [the Scryfall API][api] for use in Typescript & Javascript projects.
 
 This library uses [semver] for versioning. These versions only describe this library, not the Scryfall API as a whole.
 
 [semver]: https://semver.org/
+[api]: https://scryfall.com/docs/api
+
+## Usage
+
+Each object or type exported by this library corresponds to a Scryfall API object.
+
+-
 
 ## Details
 
