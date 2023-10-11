@@ -1,7 +1,15 @@
 import { ScryfallObject } from "../Object";
 import { ScryfallCardFields } from "./CardFields";
 
+/**
+ * A collection of types representing card faces of each possible type.
+ *
+ * @see {@link https://scryfall.com/docs/api/layouts#card-faces}
+ */
 export namespace ScryfallCardFace {
+  /**
+   * The abstract root implementation of card faces.
+   */
   export type AbstractCardFace = ScryfallObject.Object<ScryfallObject.ObjectType.CardFace>;
 
   /**

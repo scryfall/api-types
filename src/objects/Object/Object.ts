@@ -1,4 +1,7 @@
 export namespace ScryfallObject {
+  /**
+   * The type of object.
+   */
   export enum ObjectType {
     /**
      * A card.
@@ -48,6 +51,9 @@ export namespace ScryfallObject {
 
   export type ObjectTypeLike = ObjectType | `${ObjectType}`;
 
+  /**
+   * The abstract base type of Scryfall objects.
+   */
   export type Object<T extends ObjectType> = {
     /** A content type for this object. */
     object: T | `${T}`;

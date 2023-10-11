@@ -8,14 +8,26 @@
     "test:lib": "tsc -p tsconfig.lib.json --noEmit",
     "test:tests": "tsc -p tsconfig.test.json --noEmit --isolatedModules"
   },
+  "files": [
+    "index.ts",
+    "src/**/*"
+  ],
+  "author": "scarletcs",
+  "license": "MIT",
+  "homepage": "https://github.com/scryfall/api-types#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scryfall/api-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scryfall/api-types/issues"
+  },
   "keywords": [
     "scryfall",
     "api",
     "types",
     "typescript"
   ],
-  "author": "scarletcs",
-  "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",

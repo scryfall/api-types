@@ -6,6 +6,11 @@ import { ScryfallRuling } from "../Ruling";
 import { ScryfallSet } from "../Set";
 import { ScryfallCardSymbol } from "../Symbology";
 
+/**
+ * A list of Scryfall objects.
+ *
+ * @see {@link https://scryfall.com/docs/api/lists}
+ */
 export namespace ScryfallList {
   /**
    * A list of objects of type T.
@@ -55,9 +60,38 @@ export namespace ScryfallList {
           total_cards?: undefined;
         });
 
+  /**
+   * A list of cards.
+   *
+   * @see {@link ScryfallCard}
+   */
   export type Cards = List<ScryfallCard.Any>;
+
+  /**
+   * A list of sets.
+   *
+   * @see {@link ScryfallSet}
+   */
   export type Sets = List<ScryfallSet>;
+
+  /**
+   * A list of rulings.
+   *
+   * @see {@link ScryfallRuling}
+   */
   export type Rulings = List<ScryfallRuling>;
+
+  /**
+   * A list of card symbols.
+   *
+   * @see {@link ScryfallCardSymbol}
+   */
   export type CardSymbols = List<ScryfallCardSymbol>;
+
+  /**
+   * A list of migrations.
+   *
+   * @see {@link ScryfallMigration}
+   */
   export type Migrations = List<ScryfallMigration>;
 }

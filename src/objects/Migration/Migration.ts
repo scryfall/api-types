@@ -8,6 +8,11 @@ export enum ScryfallMigrationStrategy {
 
 export type ScryfallMigrationStrategyLike = ScryfallMigrationStrategy | `${ScryfallMigrationStrategy}`;
 
+/**
+ * A data migration.
+ *
+ * @see {@link https://scryfall.com/docs/api/migrations}
+ */
 export type ScryfallMigration = ScryfallObject.Object<ScryfallObject.ObjectType.Migration> & {
   /** A link to the current object on Scryfall's API */
   uri: Uri;

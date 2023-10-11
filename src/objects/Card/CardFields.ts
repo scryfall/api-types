@@ -1,27 +1,34 @@
 import {
-  ScryfallFormat,
-  ScryfallLegalityLike,
-  ScryfallLanguageCodeLike,
-  ScryfallLayoutLike,
-  ScryfallColors,
-  ScryfallImageSize,
-  ScryfallBorderColorLike,
   ScryfallBasicFinishLike,
+  ScryfallBorderColorLike,
+  ScryfallColors,
+  ScryfallFormat,
   ScryfallFrameEffectLike,
   ScryfallFrameLike,
   ScryfallGameLike,
   ScryfallImageStatusLike,
+  ScryfallImageUris,
+  ScryfallLanguageCodeLike,
+  ScryfallLayoutLike,
+  ScryfallLegalityLike,
+  ScryfallPrices,
   ScryfallPromoType,
+  ScryfallPurchaseUris,
   ScryfallRarityLike,
+  ScryfallRelatedUris,
   ScryfallSecurityStampLike,
 } from "./values";
 import { ScryfallCardFace } from "./CardFace";
 import { Uuid, Uri, Integer, Decimal, IsoDate } from "../../internal";
 import { SetTypeLike } from "../Set/values";
 import { ScryfallRelatedCard } from "./RelatedCard";
+import { ScryfallManaTypes } from "./values/ManaType";
 
 type LegalityRecord = Record<ScryfallFormat, ScryfallLegalityLike>;
 
+/**
+ * A collection of types related to each possible card field.
+ */
 export namespace ScryfallCardFields {}
 
 export namespace ScryfallCardFields.Core {
@@ -32,7 +39,11 @@ export namespace ScryfallCardFields.Core {
     oracle_id: Uuid;
     /** A language code for this printing. */
     lang: ScryfallLanguageCodeLike;
-    /** A code for this card’s layout. */
+    /**
+     * A code for this card’s layout.
+     *
+     * @see {@link https://scryfall.com/docs/api/layouts}
+     */
     layout: ScryfallLayoutLike;
     /** A link to where you can begin paginating all re/prints for this card on Scryfall’s API. */
     prints_search_uri: Uri;
@@ -171,7 +182,7 @@ export namespace ScryfallCardFields.Gameplay {
     /** This card’s rank/popularity on Penny Dreadful. Not all cards are ranked. */
     penny_rank?: Integer;
     /** Colors of mana that this card could produce. */
-    produced_mana?: ScryfallColors;
+    produced_mana?: ScryfallManaTypes;
     /** True if this card is on the Reserved List. */
     reserved: boolean;
     /** The type line of this card. */
@@ -187,39 +198,6 @@ export namespace ScryfallCardFields.Print {
     source_uri: Uri;
     /** The name of the source that previewed this card. */
     source: string;
-  };
-
-  // URIs for various image sizes of this card.
-  type ImageUris = Record<ScryfallImageSize, Uri>;
-
-  // Card prices.
-  type Prices = {
-    usd: string | null;
-    usd_foil: string | null;
-    usd_etched: string | null;
-    eur: string | null;
-    eur_foil: string | null;
-    tix: string | null;
-  };
-
-  type PurchaseUris = {
-    /** This card's purchase page on TCGPlayer. */
-    tcgplayer: Uri;
-    /** This card's purchase page on Cardmarket. Often inexact due to how Cardmarket links work. */
-    cardmarket: Uri;
-    /** This card's purchase page on Cardhoarder. */
-    cardhoarder: Uri;
-  };
-
-  type RelatedUris = {
-    /** This card's Gatherer page. */
-    gatherer?: Uri;
-    /** TCGPlayer Infinite articles related to this card. */
-    tcgplayer_infinite_articles?: Uri;
-    /** TCGPlayer Infinite decks with this card. */
-    tcgplayer_infinite_decks?: Uri;
-    /** EDHREC's page for this card. */
-    edhrec?: Uri;
   };
 
   export type RootProperties = {
@@ -277,17 +255,17 @@ export namespace ScryfallCardFields.Print {
     /** True if this card is oversized. */
     oversized: boolean;
     /** An object containing daily price information for this card, including usd, usd_foil, usd_etched, eur, eur_foil, eur_etched, and tix prices, as strings. */
-    prices: Prices;
+    prices: ScryfallPrices;
     /** True if this card is a promotional print. */
     promo: boolean;
     /** An array of strings describing what categories of promo cards this card falls into. */
     promo_types?: ScryfallPromoType[];
     /** An object providing URIs to this card’s listing on major marketplaces. Omitted if the card is unpurchaseable. */
-    purchase_uris?: PurchaseUris;
+    purchase_uris?: ScryfallPurchaseUris;
     /** This card’s rarity. */
     rarity: ScryfallRarityLike;
     /** An object providing URIs to this card’s listing on other Magic: The Gathering online resources. */
-    related_uris: RelatedUris;
+    related_uris: ScryfallRelatedUris;
     /** The date this card was first released. */
     released_at: IsoDate;
     /** True if this card is a reprint. */
@@ -332,7 +310,7 @@ export namespace ScryfallCardFields.Print {
    */
   export type CardSideSpecific = {
     /** An object listing available imagery for this card. See the Card Imagery article for more information. */
-    image_uris?: ImageUris;
+    image_uris?: ScryfallImageUris;
   };
 
   /**

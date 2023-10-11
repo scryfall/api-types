@@ -1,6 +1,11 @@
 import { ScryfallObject } from "../Object";
 import { IsoDate, Uuid } from "../../internal";
 
+/**
+ * Rulings made on a card by the rules manager.
+ *
+ * @see {@link https://scryfall.com/docs/api/rulings}
+ */
 export type ScryfallRuling = ScryfallObject.Object<ScryfallObject.ObjectType.Ruling> & {
   /**
    * The Oracle ID of the card this ruling is associated with.

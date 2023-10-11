@@ -1,13 +1,16 @@
 import { ScryfallObject } from "../Object";
 import { Uri, Uuid } from "../../internal";
 
+/**
+ * A related card entry.
+ */
 export type ScryfallRelatedCard = ScryfallObject.Object<ScryfallObject.ObjectType.RelatedCard> & {
   /**
    * An unique ID for this card in Scryfall’s database.
    */
   id: Uuid;
   /**
-   * A field explaining what role this card plays in this relationship, one of token, meld_part, meld_result, or combo_piece.
+   * A field explaining what role this card plays in this relationship.
    */
   component: "token" | "meld_part" | "meld_result" | "combo_piece";
   /**

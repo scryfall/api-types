@@ -8,7 +8,10 @@ type Layout<T extends ScryfallLayout> = Pick<ScryfallCardFields.Core.All, "layou
 };
 
 /**
+ * A collection of types representing Scryfall cards of each possible layout.
  *
+ * @see {@link https://scryfall.com/docs/api/cards}
+ * @see {@link https://scryfall.com/docs/api/layouts}
  */
 export namespace ScryfallCard {
   /** The abstract root implementation of cards. */
@@ -124,6 +127,13 @@ export namespace ScryfallCard {
     ScryfallCardFields.Print.RootProperties &
     ScryfallCardFields.Print.CardSpecific;
 
+  /**
+   * A card with an indeterminate layout.
+   *
+   * An object of this value may be any card at all.
+   *
+   * Since this may be of any layout, common fields are available, but layout-specific fields (e.g. card_faces) will be unavailable until you perform type narrowing on
+   */
   export type Any =
     | Normal
     | Meld

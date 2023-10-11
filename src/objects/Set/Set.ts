@@ -2,6 +2,11 @@ import { ScryfallObject } from "../Object";
 import { Uuid, Integer, Uri, IsoDate } from "../../internal";
 import { SetTypeLike } from "./values";
 
+/**
+ * Description of a Magic card set.
+ *
+ * @see {@link https://scryfall.com/docs/api/sets}
+ */
 export type ScryfallSet = ScryfallObject.Object<ScryfallObject.ObjectType.Set> & {
   /**
    * A unique ID for this set on Scryfall that will not change.

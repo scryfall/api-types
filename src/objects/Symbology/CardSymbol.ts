@@ -2,6 +2,11 @@ import { ScryfallObject } from "../Object";
 import { Decimal, Uri } from "../../internal";
 import { ScryfallColors } from "../Card/values";
 
+/**
+ * Description of a card symbol.
+ *
+ * @see {@link https://scryfall.com/docs/api/card-symbols}
+ */
 export type ScryfallCardSymbol = ScryfallObject.Object<ScryfallObject.ObjectType.CardSymbol> & {
   /**
    * The plaintext symbol. Often surrounded with curly braces {}. Note that not all symbols are ASCII text (for example, {∞}).
