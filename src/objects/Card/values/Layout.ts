@@ -1,3 +1,6 @@
+/**
+ * The set of card layouts.
+ */
 export enum ScryfallLayout {
   /** A standard Magic card with one face */
   Normal = "normal",
@@ -49,7 +52,13 @@ export enum ScryfallLayout {
 
 export type ScryfallLayoutLike = ScryfallLayout | `${ScryfallLayout}`;
 
+/**
+ * Groupings of layouts.
+ */
 export namespace ScryfallLayoutGroup {
+  /**
+   * A type describing all layouts that represent a single-faced card, i.e. one with no card_faces property.
+   */
   export type SingleFaceType =
     | ScryfallLayout.Normal
     | ScryfallLayout.Meld
@@ -67,6 +76,9 @@ export namespace ScryfallLayoutGroup {
     | ScryfallLayout.Augment
     | ScryfallLayout.Host;
 
+  /**
+   * A type describing all layouts that represent a multi-faced card, i.e. one with a card_faces property.
+   */
   export type MultiFaceType =
     | ScryfallLayout.Split
     | ScryfallLayout.Flip
@@ -77,8 +89,14 @@ export namespace ScryfallLayoutGroup {
     | ScryfallLayout.ArtSeries
     | ScryfallLayout.ReversibleCard;
 
+  /**
+   * A card describing all layouts that represent a multi-faced card where both faces are on the front.
+   */
   export type SingleSidedSplitType = ScryfallLayout.Split | ScryfallLayout.Flip | ScryfallLayout.Adventure;
 
+  /**
+   * A card describing all layouts that represent a multi-faced card where the faces are on the front and back of the card.
+   */
   export type DoubleSidedSplitType =
     | ScryfallLayout.Transform
     | ScryfallLayout.ModalDfc

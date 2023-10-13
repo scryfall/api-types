@@ -10,6 +10,35 @@ type Layout<T extends ScryfallLayout> = Pick<ScryfallCardFields.Core.All, "layou
 /**
  * A collection of types representing Scryfall cards of each possible layout.
  *
+ *
+ * An individual type exists for each possible layout: {@link ScryfallCard.Normal}, {@link ScryfallCard.Transform}, etc.
+ *
+ * Then various groups exist to help describe cards of indeterminate layout:
+ * - {@link ScryfallCard.Any} describes any card at all. Think of it as like `any` but for cards.
+ * - {@link ScryfallCard.AnySingleFaced} describes any card with one face and no `card_faces` property, e.g. {@link ScryfallCard.Normal Normal} or {@link ScryfallCard.Saga Saga}.
+ * - {@link ScryfallCard.AnyMultiFaced} describes any card with multiple faces. It may be a split card with both "faces" on the front, or a double-sided card with faces on the front and back of the card. It also collects the next two groups on this list.
+ * - {@link ScryfallCard.AnySingleSidedSplit} describes any card with multiple faces where both faces are on the front, e.g. {@link ScryfallCard.Adventure Adventure}, {@link ScryfallCard.Flip Flip}, or {@link ScryfallCard.Split Split}.
+ * - {@link ScryfallCard.AnyDoubleSidedSplit} describes any card with multiple faces where the faces are on the front and back of the card, e.g.  {@link ScryfallCard.Transform Transform},  {@link ScryfallCard.ModalDfc ModalDfc}, or  {@link ScryfallCard.ReversibleCard ReversibleCard}.
+ *
+ * We recommend starting from `ScryfallCard.Any` to describe generic API responses, and you will need to do type narrowing to access more specific fields.
+ *
+ * @example // Type narrowing by layout
+ * const mysteryCard: ScryfallCard.Any = getCard();
+ *
+ * if (mysteryCard.layout === ScryfallLayout.Transform) {
+ *   const transform: ScryfallCard.Transform = mysteryCard;
+ * }
+ *
+ * @example // Type narrowing by property
+ * const mysteryCard: ScryfallCard.Any = getCard();
+ *
+ * if ("card_faces" in mysteryCard) {
+ *   const mfc: ScryfallCard.AnyMultiFaced = mysteryCard;
+ * } else {
+ *   const sfc: ScryfallCard.AnySingleFaced = mysteryCard;
+ * }
+ *
+ *
  * @see {@link https://scryfall.com/docs/api/cards}
  * @see {@link https://scryfall.com/docs/api/layouts}
  */
