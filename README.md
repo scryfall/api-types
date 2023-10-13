@@ -34,6 +34,36 @@ const response = await fetch("https://api.scryfall.com/sets");
 const sets: ScryfallList.Sets = await response.json();
 ```
 
+### Type narrowing on a card
+
+```ts
+import { ScryfallCard, ScryfallLayout } from "@scryfall/api-types";
+
+// This card might be of any type.
+// You cannot access `mysteryCard.card_faces`, because it might not have that property.
+const mysteryCard: ScryfallCard.Any = getCard();
+
+// You can narrow by layout:
+if (mysteryCard.layout === ScryfallLayout.Transform) {
+  // It's a transforming DFC!
+  // You can access transform-specific fields in this scope, or assign it to a variable.
+  const faces = anyCard.card_faces;
+  const transform: ScryfallCard.Transform = mysteryCard;
+}
+
+// You can also narrow by property:
+if ("card_faces" in anyCard) {
+  // It's *some* kind of multi-faced card.
+  // You can now access the card_faces property.
+  // You'll need to do some further type narrowing to know more about what's in the card.
+  const faces = anyCard.card_faces;
+  const multifaced: ScryfallCard.AnyMultiFaced = anyCard;
+} else {
+  const sfc: ScryfallCard.AnySingleFaced = anyCard;
+}
+
+```
+
 ## Usage
 
 Each type and enum exported by this library corresponds to a Scryfall API object and its values.
