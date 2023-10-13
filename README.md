@@ -4,6 +4,36 @@ This library documents the definitive comprehensive typings of [the Scryfall API
 
 This library uses [semver] for versioning. These versions only describe this library, not the Scryfall API as a whole.
 
+## Examples
+
+### Fetching a card
+
+```ts
+// CommonJS module syntax
+const { ScryfallCard } = require("@scryfall/api-types");
+
+// ES module syntax
+import { ScryfallCard } from "@scryfall/api-types";
+
+// Fetch a card
+const response = await fetch("https://api.scryfall.com/cards/iko/275");
+const godzilla: ScryfallCard.Any = await response.json();
+```
+
+### Fetching the list of sets
+
+```ts
+// CommonJS module syntax
+const { ScryfallList } = require("@scryfall/api-types");
+
+// ES module syntax
+import { ScryfallList } from "@scryfall/api-types";
+
+// Fetch the list of all setss
+const response = await fetch("https://api.scryfall.com/sets");
+const sets: ScryfallList.Sets = await response.json();
+```
+
 ## Usage
 
 Each type and enum exported by this library corresponds to a Scryfall API object and its values.
