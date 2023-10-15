@@ -1,4 +1,4 @@
-import { Uri } from "src/internal";
+import { Uri } from "../../../../src/internal";
 
 /**
  * Possible purchase URIs for a card.
