@@ -2,6 +2,7 @@ import { ScryfallObject } from "../Object";
 import { ScryfallLayout, ScryfallLayoutGroup } from "./values";
 import { ScryfallCardFace } from "./CardFace";
 import { ScryfallCardFields } from "./CardFields";
+import { Overlap4 } from "../../internal";
 
 type Layout<T extends ScryfallLayout> = Pick<ScryfallCardFields.Core.All, "layout"> & {
   layout: T | `${T}`;
@@ -187,6 +188,15 @@ export namespace ScryfallCard {
     | DoubleFacedToken
     | ArtSeries
     | ReversibleCard;
+
+  /**
+   * A card with a completely unknown data format.
+   *
+   * Any possible field allowed in any possible layout may be present here.
+   */
+  export type Unknown = Overlap4<SingleFace, SingleSidedSplit, DoubleSidedSplit, ReversibleCard> &
+    Partial<ScryfallCardFields.Gameplay.CombatStats> &
+    Partial<ScryfallCardFields.Gameplay.VanguardStats>;
 
   /**
    * Any card with a single-faced layout. These all have a .
