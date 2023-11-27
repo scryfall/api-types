@@ -158,3 +158,5 @@ const Esika: TestCard<ScryfallCard.ModalDfc> = {
       "https://www.cardhoarder.com/cards/87673?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
   },
 };
+
+const Esika_Unknown: ScryfallCard.Unknown = Esika;

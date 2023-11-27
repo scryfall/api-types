@@ -159,3 +159,5 @@ const AltarOfBhaal: TestCard<ScryfallCard.Adventure> = {
       "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Altar+of+Bhaal&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
   },
 };
+
+const AltarOfBhaal_Unknown: ScryfallCard.Unknown = AltarOfBhaal;

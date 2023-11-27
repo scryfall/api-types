@@ -140,3 +140,5 @@ const Angel: TestCard<ScryfallCard.DoubleFacedToken> = {
       "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Angel+%2F%2F+Angel&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
   },
 };
+
+const Angel_Unknown: ScryfallCard.Unknown = Angel;
