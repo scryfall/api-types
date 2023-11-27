@@ -188,6 +188,16 @@ export namespace ScryfallCard {
     | ArtSeries
     | ReversibleCard;
 
+  export type Unknown = Omit<AbstractCard, "oracle_id"> &
+    Partial<Pick<AbstractCard, "oracle_id">> &
+    (
+      | Partial<SingleFace>
+      | Partial<SingleSidedSplit>
+      | Partial<DoubleSidedSplit>
+      | Partial<ReversibleCard>
+      | Partial<Vanguard>
+    );
+
   /**
    * Any card with a single-faced layout. These all have a .
    *
