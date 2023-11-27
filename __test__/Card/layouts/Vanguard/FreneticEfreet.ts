@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const FreneticEfreet: ScryfallCard.Vanguard = {
+const FreneticEfreet: TestCard<ScryfallCard.Vanguard> = {
   object: "card",
   id: "3b81d1a1-487d-40b7-88f5-691d2a01dad5",
   oracle_id: "df33f381-ff74-4ef2-8396-443019590006",

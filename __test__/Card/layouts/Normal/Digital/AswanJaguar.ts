@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Astral card
-const AswanJaguar: ScryfallCard.Normal = {
+const AswanJaguar: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "76fab0bc-abc0-4e9f-ae06-b7d748cb073d",
   oracle_id: "9ab97610-76ad-4631-825e-8596dc9cfd4c",

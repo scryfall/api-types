@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Basic land
-const Island: ScryfallCard.Normal = {
+const Island: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "6245d2f8-8ef0-4d2a-9abb-99839dc3abf0",
   oracle_id: "b2c6aa39-2d2a-459c-a555-fb48ba993373",

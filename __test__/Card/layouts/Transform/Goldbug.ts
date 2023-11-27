@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Goldbug: ScryfallCard.Transform = {
+const Goldbug: TestCard<ScryfallCard.Transform> = {
   object: "card",
   id: "8e4a8db9-ef57-4ea0-952c-1e5d343fb5d9",
   oracle_id: "d1960749-c11e-4ac4-97cb-f37d7875d479",

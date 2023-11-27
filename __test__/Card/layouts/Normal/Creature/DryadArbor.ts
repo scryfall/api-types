@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Land creature
-const DryadArbor: ScryfallCard.Normal = {
+const DryadArbor: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "bb3a843b-2dea-4b44-be74-c09c18b9b969",
   oracle_id: "e996cd67-739c-40f4-b276-0042acf26c71",

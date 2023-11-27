@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const EveryLastVestige: ScryfallCard.Scheme = {
+const EveryLastVestige: TestCard<ScryfallCard.Scheme> = {
   object: "card",
   id: "c6f67230-8208-4a77-af66-661de044e188",
   oracle_id: "4f7600d8-53f8-463b-82a8-bda483f0b41b",

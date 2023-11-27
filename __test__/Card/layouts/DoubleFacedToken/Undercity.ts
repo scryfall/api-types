@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Undercity: ScryfallCard.DoubleFacedToken = {
+const Undercity: TestCard<ScryfallCard.DoubleFacedToken> = {
   object: "card",
   id: "2c65185b-6cf0-451d-985e-56aa45d9a57d",
   oracle_id: "36b61021-72f0-4c22-a41d-9b2f093d7ca8",

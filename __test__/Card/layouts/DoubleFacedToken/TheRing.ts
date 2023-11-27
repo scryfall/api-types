@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const TheRing: ScryfallCard.DoubleFacedToken = {
+const TheRing: TestCard<ScryfallCard.DoubleFacedToken> = {
   object: "card",
   id: "7215460e-8c06-47d0-94e5-d1832d0218af",
   oracle_id: "98737456-ac2a-420d-aa0e-778ba3a22cec",

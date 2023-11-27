@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Robo: ScryfallCard.Augment = {
+const Robo: TestCard<ScryfallCard.Augment> = {
   object: "card",
   id: "569f48f9-db8c-458d-b1c8-fed5fd844bfd",
   oracle_id: "8937f17f-f052-416a-b5d4-b91b9f0793c9",

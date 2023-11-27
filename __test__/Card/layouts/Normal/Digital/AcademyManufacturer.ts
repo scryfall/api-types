@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // MTGO promo
-const AcademyManufacturer: ScryfallCard.Normal = {
+const AcademyManufacturer: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "b67c27f1-12d1-4c48-9e22-31c43a9ecbbc",
   oracle_id: "f36d1d8b-8303-44a9-ab56-531931641ea2",

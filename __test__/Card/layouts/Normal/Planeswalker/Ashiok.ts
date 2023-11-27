@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Ashiok: ScryfallCard.Normal = {
+const Ashiok: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "599c3c9f-dfb7-4357-9d9c-9a1a4616b103",
   oracle_id: "b6f52260-9ad5-4024-acf9-d77f3c08c872",

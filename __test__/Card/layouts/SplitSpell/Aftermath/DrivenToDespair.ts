@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Aftermath
-const DrivenToDespair: ScryfallCard.Split = {
+const DrivenToDespair: TestCard<ScryfallCard.Split> = {
   object: "card",
   id: "7713ba59-dd4c-4b49-93a7-292728df86b8",
   oracle_id: "87fca901-678d-4c9a-be4a-9dce2a53074b",

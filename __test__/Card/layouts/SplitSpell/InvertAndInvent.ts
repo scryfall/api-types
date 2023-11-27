@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const InvertAndInvent: ScryfallCard.Split = {
+const InvertAndInvent: TestCard<ScryfallCard.Split> = {
   object: "card",
   id: "054a4e4f-8baa-41cf-b24c-d068e8b9a070",
   oracle_id: "9a378964-2c04-4d60-a905-c819d37ed4c3",

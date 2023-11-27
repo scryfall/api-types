@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const TangledFlorahedron: ScryfallCard.ModalDfc = {
+const TangledFlorahedron: TestCard<ScryfallCard.ModalDfc> = {
   object: "card",
   id: "235d1ffc-72aa-40a2-95dc-3f6a8d495061",
   oracle_id: "53542c79-a62a-4d6a-97db-5296e9c68302",

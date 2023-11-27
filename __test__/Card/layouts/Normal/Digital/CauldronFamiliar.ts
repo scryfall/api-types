@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Arena rebalanced card
-const CauldronFamiliar: ScryfallCard.Normal = {
+const CauldronFamiliar: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "c55cdc15-e289-49a0-94d9-d0a118ad0a2a",
   oracle_id: "6a94fb8a-c0bf-40d9-ad78-de9695797888",

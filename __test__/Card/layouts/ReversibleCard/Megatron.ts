@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Megatron: ScryfallCard.ReversibleCard = {
+const Megatron: TestCard<ScryfallCard.ReversibleCard> = {
   object: "card",
   id: "4d227cd3-ebfe-4dd3-929a-4f8ff7c8981e",
   multiverse_ids: [],

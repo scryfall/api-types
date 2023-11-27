@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Esika: ScryfallCard.ModalDfc = {
+const Esika: TestCard<ScryfallCard.ModalDfc> = {
   object: "card",
   id: "f6cd7465-9dd0-473c-ac5e-dd9e2f22f5f6",
   oracle_id: "92023a5d-a143-4950-a71b-d736e6b8e959",

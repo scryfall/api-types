@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Rowan: ScryfallCard.ModalDfc = {
+const Rowan: TestCard<ScryfallCard.ModalDfc> = {
   object: "card",
   id: "18c16872-3675-4a4d-962a-2e17ad6f3886",
   oracle_id: "dd06c11c-c4fd-414e-ac63-5556f31491f5",

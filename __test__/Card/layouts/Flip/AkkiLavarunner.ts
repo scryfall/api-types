@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Flip card
-const AkkiLavarunner: ScryfallCard.Flip = {
+const AkkiLavarunner: TestCard<ScryfallCard.Flip> = {
   object: "card",
   id: "6ee6cd34-c117-4d7e-97d1-8f8464bfaac8",
   oracle_id: "47795817-73e5-4af6-bd1e-d69b193e8e9e",

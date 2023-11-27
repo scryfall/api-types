@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Jund: ScryfallCard.Planar = {
+const Jund: TestCard<ScryfallCard.Planar> = {
   object: "card",
   id: "585fde63-4cb5-4235-8c95-2a7a511e7c3f",
   oracle_id: "9aa94de8-b114-4479-a771-c7bc0297be58",

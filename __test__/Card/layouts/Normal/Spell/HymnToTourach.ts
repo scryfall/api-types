@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // White border
-const HymnToTourach: ScryfallCard.Normal = {
+const HymnToTourach: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "57315f88-6cc5-4b1c-b56e-c8cdbc04f1a1",
   oracle_id: "992d9a72-d34d-47d7-96fb-37f0efb515ef",

@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Ajani: ScryfallCard.ReversibleCard = {
+const Ajani: TestCard<ScryfallCard.ReversibleCard> = {
   object: "card",
   id: "9cd6a16f-1eff-4624-8f7f-4d9e70a694bb",
   multiverse_ids: [],

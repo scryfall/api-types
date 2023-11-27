@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Kerblam: ScryfallCard.Planar = {
+const Kerblam: TestCard<ScryfallCard.Planar> = {
   object: "card",
   id: "4c46b6c1-0c84-4bd3-b317-9b8191ad937e",
   oracle_id: "71bff56b-733c-4d74-9e0c-85371a8b3787",

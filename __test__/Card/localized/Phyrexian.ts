@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const PhyrexianArena: ScryfallCard.Any = {
+const PhyrexianArena: TestCard<ScryfallCard.Any> = {
   object: "card",
   id: "3b18d219-efde-4cc0-b955-cb71ead88023",
   oracle_id: "ee579a32-a048-4335-b966-231ba731cdea",

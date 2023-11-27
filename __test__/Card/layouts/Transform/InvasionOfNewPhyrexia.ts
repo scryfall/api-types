@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const InvasionOfNewPhyrexia: ScryfallCard.Transform = {
+const InvasionOfNewPhyrexia: TestCard<ScryfallCard.Transform> = {
   object: "card",
   id: "1b83af86-e1a9-4be1-83dc-0c1ab81b129e",
   oracle_id: "480ea052-87d7-4fea-ac97-b6121b78f863",

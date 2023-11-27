@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Snapdax: ScryfallCard.Mutate = {
+const Snapdax: TestCard<ScryfallCard.Mutate> = {
   object: "card",
   id: "51fdeeb7-9868-4fc2-9c53-806244cd5488",
   oracle_id: "b2b78623-5a10-4ef7-b983-3d82478269c3",

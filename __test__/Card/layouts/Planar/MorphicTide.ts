@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const MorphicTide: ScryfallCard.Planar = {
+const MorphicTide: TestCard<ScryfallCard.Planar> = {
   object: "card",
   id: "54327aa2-319d-4430-a266-03cadeed6146",
   oracle_id: "302e4ac2-522b-4a0a-850a-d856639ea2a4",

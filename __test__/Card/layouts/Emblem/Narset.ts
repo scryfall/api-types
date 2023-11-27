@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Narset: ScryfallCard.Emblem = {
+const Narset: TestCard<ScryfallCard.Emblem> = {
   object: "card",
   id: "4a70dfe0-874c-473a-a26e-1f88a842df41",
   oracle_id: "476138f9-67ff-49bf-ac11-2aac20669a1d",

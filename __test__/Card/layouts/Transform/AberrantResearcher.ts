@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const AberrantResearcher: ScryfallCard.Transform = {
+const AberrantResearcher: TestCard<ScryfallCard.Transform> = {
   object: "card",
   id: "b5c9649e-9ae5-4926-bf08-71ba23aa37f1",
   oracle_id: "722ee05f-6815-41b7-9813-5ec3902c1e9f",

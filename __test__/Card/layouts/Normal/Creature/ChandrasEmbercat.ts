@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Mana dork
-const ChandrasEmbercat: ScryfallCard.Normal = {
+const ChandrasEmbercat: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "30f9c266-f32e-4483-9709-f83675331688",
   oracle_id: "e75bec5c-538d-44ce-a6c7-85580d04fac8",

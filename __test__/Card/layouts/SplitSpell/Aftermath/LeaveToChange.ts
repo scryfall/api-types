@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Aftermath
-const LeaveToChange: ScryfallCard.Split = {
+const LeaveToChange: TestCard<ScryfallCard.Split> = {
   object: "card",
   id: "f928e8e8-aa20-402c-85bd-59106e9b9cc7",
   oracle_id: "dff5d16f-3a41-4873-8188-076e77f18c75",

@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Monarch: ScryfallCard.Token = {
+const Monarch: TestCard<ScryfallCard.Token> = {
   object: "card",
   id: "0cd9c491-6ba0-4484-822c-73bcbe9b0c49",
   oracle_id: "7c934091-1bc7-4458-acef-fdac62ec3df1",

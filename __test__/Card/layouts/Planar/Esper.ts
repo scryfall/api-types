@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Esper: ScryfallCard.Planar = {
+const Esper: TestCard<ScryfallCard.Planar> = {
   object: "card",
   id: "ffdf27d3-80b4-4aa1-b943-d247e502d32c",
   oracle_id: "4eebfaf3-18da-4661-b6a5-d874585e170a",

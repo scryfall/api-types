@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Angel: ScryfallCard.Token = {
+const Angel: TestCard<ScryfallCard.Token> = {
   object: "card",
   id: "0dd269c7-1333-470d-b8ef-e54add09b350",
   oracle_id: "29ff8699-53d8-413b-8a3c-0e3ea1e13ff0",

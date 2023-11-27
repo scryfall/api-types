@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Akroma: ScryfallCard.Vanguard = {
+const Akroma: TestCard<ScryfallCard.Vanguard> = {
   object: "card",
   id: "61b07ae0-44f5-4ffe-a33b-96885d4fc26b",
   oracle_id: "eaa10dee-89da-43eb-b339-1cf59e488344",

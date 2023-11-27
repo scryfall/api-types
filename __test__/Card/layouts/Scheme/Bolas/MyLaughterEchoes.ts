@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const MyLaughterEchoes: ScryfallCard.Scheme = {
+const MyLaughterEchoes: TestCard<ScryfallCard.Scheme> = {
   object: "card",
   id: "e7d19c43-8c8d-404f-a7e7-b5205045b3b0",
   oracle_id: "c8653411-318b-41a9-8a74-f8b2ddd77892",

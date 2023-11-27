@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const FireAndIce_Ja: ScryfallCard.Split = {
+const FireAndIce_Ja: TestCard<ScryfallCard.Split> = {
   object: "card",
   id: "b1932ef7-c6ff-4708-851c-cec56def4fc2",
   oracle_id: "ae92942b-919c-4ea9-b693-85fcef765d5a",

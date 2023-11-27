@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const BeanstalkGiant: ScryfallCard.Adventure = {
+const BeanstalkGiant: TestCard<ScryfallCard.Adventure> = {
   object: "card",
   id: "dfd6b4bc-70da-4d93-bdf7-78ba176a764f",
   oracle_id: "22c75ad5-237c-4dbd-bbc4-3058a3db408f",

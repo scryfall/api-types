@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Kiora: ScryfallCard.Emblem = {
+const Kiora: TestCard<ScryfallCard.Emblem> = {
   object: "card",
   id: "e45f7850-2ebb-4530-9859-f87b4e0e27be",
   oracle_id: "1a7523ff-8683-4187-bea7-edee70392791",

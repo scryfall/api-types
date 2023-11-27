@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Bontu: ScryfallCard.Normal = {
+const Bontu: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "2ae1bb79-a931-4d2e-9cc9-a06862dc5cde",
   oracle_id: "183891b0-b5ec-47f4-8d09-b9d3cfc4e7f1",

@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Alaundo: ScryfallCard.ArtSeries = {
+const Alaundo: TestCard<ScryfallCard.ArtSeries> = {
   object: "card",
   id: "04565848-e427-4ca2-a926-668776005016",
   oracle_id: "df57f192-aac2-4efc-9652-688424b4949b",

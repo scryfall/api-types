@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const dungeon: ScryfallCard.Normal = {
+const dungeon: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "6f509dbe-6ec7-4438-ab36-e20be46c9922",
   oracle_id: "30d0398c-bf5a-4b30-936f-afdb5a109b4b",

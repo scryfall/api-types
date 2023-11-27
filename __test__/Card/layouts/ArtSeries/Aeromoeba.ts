@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const AeromoebaUnsigned: ScryfallCard.ArtSeries = {
+const AeromoebaUnsigned: TestCard<ScryfallCard.ArtSeries> = {
   object: "card",
   id: "10527c8f-efcc-4b25-b637-47c084d4f462",
   oracle_id: "9492d339-afa4-4d06-af31-731110927baa",

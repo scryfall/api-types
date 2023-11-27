@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const TalonGates: ScryfallCard.Planar = {
+const TalonGates: TestCard<ScryfallCard.Planar> = {
   object: "card",
   id: "09feed09-96de-4208-b6b9-cac0ec150e70",
   oracle_id: "c85d3740-8c8d-4fef-ad33-a6f446b883ac",

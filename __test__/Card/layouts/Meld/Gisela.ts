@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Gisela: ScryfallCard.Meld = {
+const Gisela: TestCard<ScryfallCard.Meld> = {
   object: "card",
   id: "c75c035a-7da9-4b36-982d-fca8220b1797",
   oracle_id: "f3e23d5e-bd88-4e7c-a3fb-db2a8cb05b22",

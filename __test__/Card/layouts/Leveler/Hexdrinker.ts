@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Hexdrinker: ScryfallCard.Leveler = {
+const Hexdrinker: TestCard<ScryfallCard.Leveler> = {
   object: "card",
   id: "89f5cc05-5d9d-4709-b3c5-a6249c294acc",
   oracle_id: "69bc2afd-9f53-47f2-b9c8-f12732784e10",

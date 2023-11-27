@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const RootwireAmalgam: ScryfallCard.Prototype = {
+const RootwireAmalgam: TestCard<ScryfallCard.Prototype> = {
   object: "card",
   id: "2498b591-4a80-459f-a639-fe4cf8880be2",
   oracle_id: "7644148f-3b26-447d-9f52-28c94c111b69",

@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Druid: ScryfallCard.Class = {
+const Druid: TestCard<ScryfallCard.Class> = {
   object: "card",
   id: "09278e95-eaae-4cd4-a0d8-a2d15b0abb58",
   oracle_id: "dcbcbf42-4654-487a-acad-21f2606d229b",

@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Vizier: ScryfallCard.Token = {
+const Vizier: TestCard<ScryfallCard.Token> = {
   object: "card",
   id: "39520c16-1f4b-4f15-aeb4-53c91e8ecfcc",
   oracle_id: "c97e158a-a1be-446c-b9aa-cae931735b9d",

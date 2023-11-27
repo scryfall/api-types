@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Godsend: ScryfallCard.Normal = {
+const Godsend: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "2dcf3975-7f81-4bdd-810d-476f46444b7a",
   oracle_id: "dd91f4f2-ea46-48c5-8a80-0dc4ae5b79c4",

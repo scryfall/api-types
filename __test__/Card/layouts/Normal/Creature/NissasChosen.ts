@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Non-vanilla creature without keywords
-const NissasChosen: ScryfallCard.Normal = {
+const NissasChosen: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "8f370eff-3980-4c19-808b-c1099279ef20",
   oracle_id: "d14c9d2b-41c7-4c9a-a66a-cda34d29c7ba",

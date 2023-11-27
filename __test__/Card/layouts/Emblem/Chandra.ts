@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Chandra: ScryfallCard.Emblem = {
+const Chandra: TestCard<ScryfallCard.Emblem> = {
   object: "card",
   id: "3143984b-9798-4062-9a91-8ee139c3448e",
   oracle_id: "1c944fa3-ff6c-4638-a8cd-77d3ca68e599",

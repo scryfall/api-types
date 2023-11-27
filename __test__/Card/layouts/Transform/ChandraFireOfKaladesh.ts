@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Transform walker
-const ChandraFireOfKaladesh: ScryfallCard.Transform = {
+const ChandraFireOfKaladesh: TestCard<ScryfallCard.Transform> = {
   object: "card",
   id: "b0d6caf0-4fa8-4ec5-b7f4-1307474d1b13",
   oracle_id: "6f6b8e14-c247-4dfd-8b39-38c7a5f2f354",

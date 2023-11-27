@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Mace: ScryfallCard.Normal = {
+const Mace: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "e882c9f9-bf30-46b6-bedc-379d2c80e5cb",
   oracle_id: "629fe1be-272d-465f-b9b1-2ce177410f13",

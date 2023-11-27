@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Instant
-const LightningBolt: ScryfallCard.Normal = {
+const LightningBolt: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "f29ba16f-c8fb-42fe-aabf-87089cb214a7",
   oracle_id: "4457ed35-7c10-48c8-9776-456485fdf070",

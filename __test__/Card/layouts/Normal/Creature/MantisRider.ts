@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // French vanilla creature
-const MantisRider: ScryfallCard.Normal = {
+const MantisRider: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "82d5ce46-7118-4ede-ba1d-c387e7ce16e7",
   oracle_id: "5c1a0a7a-dea4-4b8e-b9c0-8c19942a01ef",

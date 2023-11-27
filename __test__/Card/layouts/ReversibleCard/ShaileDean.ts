@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Shaile: ScryfallCard.ModalDfc = {
+const Shaile: TestCard<ScryfallCard.ModalDfc> = {
   object: "card",
   id: "938cee8f-ac2c-49a5-9ff7-1367d0edfabe",
   oracle_id: "b0907441-30fe-436a-b29c-585b57eabfc3",

@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Pony: ScryfallCard.Host = {
+const Pony: TestCard<ScryfallCard.Host> = {
   object: "card",
   id: "763d2083-2022-4d49-90ab-ec52e584842c",
   oracle_id: "3f708242-7eed-4f66-bb4d-b2d2b3bcdd54",

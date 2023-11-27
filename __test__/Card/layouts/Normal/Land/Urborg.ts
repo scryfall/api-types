@@ -1,7 +1,7 @@
 import { ScryfallCard } from "src";
 
 // Urborg
-const Urborg: ScryfallCard.Normal = {
+const Urborg: TestCard<ScryfallCard.Normal> = {
   object: "card",
   id: "9e1a9e38-6ffc-490f-b0be-23ba4e8204c6",
   oracle_id: "db6174d7-211d-4817-b8e4-8384594c83f9",

@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Bask: ScryfallCard.Scheme = {
+const Bask: TestCard<ScryfallCard.Scheme> = {
   object: "card",
   id: "ca36efdd-c60c-412c-9fd5-5e6b97d2f9cd",
   oracle_id: "bf77c996-df58-45d8-bce7-6de3e4fa20da",

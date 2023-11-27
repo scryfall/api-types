@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Okaun: ScryfallCard.ReversibleCard = {
+const Okaun: TestCard<ScryfallCard.ReversibleCard> = {
   object: "card",
   id: "94eea6e3-20bc-4dab-90ba-3113c120fb90",
   multiverse_ids: [],

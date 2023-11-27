@@ -1,6 +1,6 @@
 import { ScryfallCard } from "src";
 
-const Bruna: ScryfallCard.Meld = {
+const Bruna: TestCard<ScryfallCard.Meld> = {
   object: "card",
   id: "27907985-b5f6-4098-ab43-15a0c2bf94d5",
   oracle_id: "bce7e45d-b2c5-43aa-91a6-3a3c24f30850",
