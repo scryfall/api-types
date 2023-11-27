@@ -143,3 +143,5 @@ const AkkiLavarunner: TestCard<ScryfallCard.Flip> = {
       "https://www.cardhoarder.com/cards/21237?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
   },
 };
+
+const AkkiLavarunner_Unknown: ScryfallCard.Unknown = AkkiLavarunner;

@@ -168,3 +168,5 @@ const Ajani: TestCard<ScryfallCard.ReversibleCard> = {
       "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Ajani+Goldmane+%2F%2F+Ajani+Goldmane&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
   },
 };
+
+const Ajani_Unknown: ScryfallCard.Unknown = Ajani;

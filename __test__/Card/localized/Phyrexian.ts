@@ -123,3 +123,5 @@ const PhyrexianArena: TestCard<ScryfallCard.Any> = {
       "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Phyrexian+Arena&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
   },
 };
+
+const PhyrexianArena_Unknown: ScryfallCard.Unknown = PhyrexianArena;

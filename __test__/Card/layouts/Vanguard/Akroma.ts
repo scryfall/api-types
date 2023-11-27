@@ -112,3 +112,5 @@ const Akroma: TestCard<ScryfallCard.Vanguard> = {
       "https://www.cardhoarder.com/cards/19?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
   },
 };
+
+const Akroma_Unknown: ScryfallCard.Unknown = Akroma;
