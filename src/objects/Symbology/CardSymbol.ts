@@ -49,6 +49,14 @@ export type ScryfallCardSymbol = ScryfallObject.Object<ScryfallObject.ObjectType
    */
   colors: ScryfallColors;
   /**
+   * True if the symbol is a hybrid mana symbol. Note that monocolor Phyrexian symbols aren’t considered hybrid.
+   */
+  hybrid: boolean;
+  /**
+   * True if the symbol is a Phyrexian mana symbol, i.e. it can be paid with 2 life.
+   */
+  phyrexian: boolean;
+  /**
    * An array of plaintext versions of this symbol that Gatherer uses on old cards to describe original printed text. For example: {W} has ["oW", "ooW"] as alternates.
    */
   gatherer_alternates?: string[] | null;
