@@ -1,3 +1,6 @@
+/**
+ * This namespace defines the abstract base object property of all Scryfall objects.
+ */
 export namespace ScryfallObject {
   /**
    * The type of object.
