@@ -4,6 +4,12 @@ This library documents the definitive comprehensive typings of [the Scryfall API
 
 This library uses [semver] for versioning. These versions only describe this library, not the Scryfall API as a whole.
 
+## Installation
+
+```bash
+npm install @scryfall/api-types
+```
+
 ## Examples
 
 ### Fetching a card
@@ -61,7 +67,6 @@ if ("card_faces" in anyCard) {
 } else {
   const sfc: ScryfallCard.AnySingleFaced = anyCard;
 }
-
 ```
 
 ## Usage
