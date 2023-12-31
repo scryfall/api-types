@@ -19,4 +19,5 @@ export type ScryfallFormat =
   | "duel"
   | "oldschool"
   | "premodern"
-  | "predh";
+  | "predh"
+  | "timeless";
