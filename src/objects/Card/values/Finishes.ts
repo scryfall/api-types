@@ -62,6 +62,10 @@ export enum ScryfallExtendedFinish {
    * @trivia The name was a reference to "step and repeat", a style of pattern used in printing banners.
    */
   StepAndCompleat = "stepandcompleat",
+  /**
+   * A Lord of the Rings finish that made the card name, type line and oracle text area appear as scrolls.
+   */
+  Scroll = "scroll",
 }
 
 export type ScryfallExtendedFinishLike = ScryfallExtendedFinish | `${ScryfallExtendedFinish}`;
