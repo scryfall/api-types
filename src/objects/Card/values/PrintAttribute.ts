@@ -33,6 +33,7 @@ type ScryfallPrintAttribute =
   | "plastic"
   | "playerrewards"
   | "playpromo"
+  | "poster"
   | "premiereshop"
   | "prerelease"
   | "promopack"
