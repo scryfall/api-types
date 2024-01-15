@@ -45,6 +45,8 @@ export enum ScryfallFrameEffect {
   FanDfc = "fandfc",
   /** The cards have the Upside Down transforming marks */
   UpsidedownDfc = "upsidedowndfc",
+  /** The artwork extends all the way to the bottom of the card */
+  Textless = "textless",
 }
 
 export type ScryfallFrameEffectLike = ScryfallFrameEffect | `${ScryfallFrameEffect}`;
