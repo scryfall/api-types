@@ -45,6 +45,8 @@ export enum ScryfallFrameEffect {
   FanDfc = "fandfc",
   /** The cards have the Upside Down transforming marks */
   UpsidedownDfc = "upsidedowndfc",
+  /** The bottom right of the artwork has a MTG logo foil stamp */
+  Stamped = "stamped",
 }
 
 export type ScryfallFrameEffectLike = ScryfallFrameEffect | `${ScryfallFrameEffect}`;
