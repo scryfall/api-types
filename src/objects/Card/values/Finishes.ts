@@ -21,6 +21,8 @@ export enum ScryfallExtendedFinish {
   ConfettiFoil = "confettifoil",
   /**
    * The Dungeons & Dragons glossy finish that superimposed an ampersand over the card.
+   *
+   * @deprecated This is replaced by {@link Embossed} instead.
    */
   Ampersand = "ampersand",
   /**
@@ -66,6 +68,7 @@ export enum ScryfallExtendedFinish {
    * A Lord of the Rings finish that made the card name, type line and oracle text area appear as scrolls.
    */
   Scroll = "scroll",
+  Embossed = "embossed",
 }
 
 export type ScryfallExtendedFinishLike = ScryfallExtendedFinish | `${ScryfallExtendedFinish}`;
