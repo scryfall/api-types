@@ -40,6 +40,10 @@ type ScryfallPrintAttribute =
   | "rebalanced"
   | "release"
   | "schinesealtart"
+  /**
+   * A Lord of the Rings appearance that made the card name, type line and oracle text area appear as scrolls.
+   */
+  | "scroll"
   | "serialized"
   | "setextension"
   | "setpromo"
