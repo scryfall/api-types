@@ -20,17 +20,11 @@ export enum ScryfallExtendedFinish {
    */
   ConfettiFoil = "confettifoil",
   /**
-   * The Dungeons & Dragons glossy finish that superimposed an ampersand over the card.
-   */
-  Ampersand = "ampersand",
-  /**
    * Galaxy foil.
-   * TODO
    */
   GalaxyFoil = "galaxyfoil",
   /**
    * Halo foil.
-   * TODO
    */
   HaloFoil = "halofoil",
   /**
@@ -62,6 +56,18 @@ export enum ScryfallExtendedFinish {
    * @trivia The name was a reference to "step and repeat", a style of pattern used in printing banners.
    */
   StepAndCompleat = "stepandcompleat",
+  /**
+   * A glossy finish with an emblem embossed on it.
+   *
+   * Examples include the D&D Ampersand logo or REX Jurassic Park logo.
+   */
+  Embossed = "embossed",
+  /**
+   * The Dungeons & Dragons glossy finish that superimposed an ampersand over the card.
+   *
+   * @deprecated This is replaced by {@link Embossed} instead.
+   */
+  Ampersand = "ampersand",
 }
 
 export type ScryfallExtendedFinishLike = ScryfallExtendedFinish | `${ScryfallExtendedFinish}`;
