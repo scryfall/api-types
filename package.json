@@ -1,6 +1,6 @@
 {
   "name": "@scryfall/api-types",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.4",
   "description": "Type definitions for the Scryfall API",
   "main": "index.ts",
   "scripts": {
