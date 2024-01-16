@@ -21,6 +21,8 @@ export enum ScryfallExtendedFinish {
   ConfettiFoil = "confettifoil",
   /**
    * The Dungeons & Dragons glossy finish that superimposed an ampersand over the card.
+   *
+   * @deprecated This is replaced by {@link Embossed} instead.
    */
   Ampersand = "ampersand",
   /**
