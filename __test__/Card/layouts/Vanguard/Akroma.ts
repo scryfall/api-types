@@ -113,4 +113,4 @@ const Akroma: TestCard<ScryfallCard.Vanguard> = {
   },
 };
 
-const Akroma_Unknown: ScryfallCard.Unknown = Akroma;
+const Akroma_Unknown: ScryfallCard.Blob = Akroma;

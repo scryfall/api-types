@@ -124,4 +124,4 @@ const PhyrexianArena: TestCard<ScryfallCard.Any> = {
   },
 };
 
-const PhyrexianArena_Unknown: ScryfallCard.Unknown = PhyrexianArena;
+const PhyrexianArena_Unknown: ScryfallCard.Blob = PhyrexianArena;

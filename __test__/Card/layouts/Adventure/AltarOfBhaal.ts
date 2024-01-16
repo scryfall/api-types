@@ -160,4 +160,4 @@ const AltarOfBhaal: TestCard<ScryfallCard.Adventure> = {
   },
 };
 
-const AltarOfBhaal_Unknown: ScryfallCard.Unknown = AltarOfBhaal;
+const AltarOfBhaal_Unknown: ScryfallCard.Blob = AltarOfBhaal;

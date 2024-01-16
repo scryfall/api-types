@@ -2,6 +2,7 @@ import { ScryfallObject } from "../Object";
 import { ScryfallLayout, ScryfallLayoutGroup } from "./values";
 import { ScryfallCardFace } from "./CardFace";
 import { ScryfallCardFields } from "./CardFields";
+import { SomePartial } from "src/internal";
 
 type Layout<T extends ScryfallLayout> = Pick<ScryfallCardFields.Core.All, "layout"> & {
   layout: T | `${T}`;
@@ -150,8 +151,8 @@ export namespace ScryfallCard {
   /** A card with the ReversibleCard layout. */
   export type ReversibleCard = Layout<ScryfallLayout.ReversibleCard> &
     Omit<AbstractCard, "oracle_id"> &
-    ScryfallCardFields.Gameplay.RootProperties &
     Omit<ScryfallCardFields.Gameplay.CardSpecific, "type_line" | "cmc"> &
+    ScryfallCardFields.Gameplay.RootProperties &
     ScryfallCardFields.Gameplay.CardFaces<ScryfallCardFace.Reversible> &
     ScryfallCardFields.Print.RootProperties &
     ScryfallCardFields.Print.CardSpecific;
@@ -188,15 +189,24 @@ export namespace ScryfallCard {
     | ArtSeries
     | ReversibleCard;
 
-  export type Unknown = Omit<AbstractCard, "oracle_id"> &
-    Partial<Pick<AbstractCard, "oracle_id">> &
-    (
-      | Partial<SingleFace>
-      | Partial<SingleSidedSplit>
-      | Partial<DoubleSidedSplit>
-      | Partial<ReversibleCard>
-      | Partial<Vanguard>
-    );
+  type ReversibleCardBlob = SomePartial<AbstractCard, "oracle_id"> &
+    SomePartial<ScryfallCardFields.Gameplay.CardSpecific, "type_line" | "cmc"> &
+    ScryfallCardFields.Gameplay.RootProperties &
+    ScryfallCardFields.Gameplay.CardFaces<ScryfallCardFace.Reversible> &
+    ScryfallCardFields.Print.RootProperties &
+    ScryfallCardFields.Print.CardSpecific;
+    type AllFightingStats = (Partial<ScryfallCardFields.Gameplay.CombatStats> & Partial<ScryfallCardFields.Gameplay.VanguardStats>)
+  export type Blob = AbstractCard &
+    (Partial<SingleFace> &
+      Partial<SingleSidedSplit> &
+      Partial<DoubleSidedSplit> &
+      Partial<Vanguard> &
+      Partial<ReversibleCardBlob>) &
+     &AllFightingStats
+    ScryfallCardFields.Gameplay.CardFaces<
+      ScryfallCardFace.AbstractCardFace &
+      AllFightingStats
+    >;
 
   /**
    * Any card with a single-faced layout. These all have a .

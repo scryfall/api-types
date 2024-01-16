@@ -144,4 +144,4 @@ const AkkiLavarunner: TestCard<ScryfallCard.Flip> = {
   },
 };
 
-const AkkiLavarunner_Unknown: ScryfallCard.Unknown = AkkiLavarunner;
+const AkkiLavarunner_Unknown: ScryfallCard.Blob = AkkiLavarunner;

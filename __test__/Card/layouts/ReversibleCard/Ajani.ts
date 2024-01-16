@@ -169,4 +169,4 @@ const Ajani: TestCard<ScryfallCard.ReversibleCard> = {
   },
 };
 
-const Ajani_Unknown: ScryfallCard.Unknown = Ajani;
+const Ajani_Unknown: ScryfallCard.Blob = Ajani;

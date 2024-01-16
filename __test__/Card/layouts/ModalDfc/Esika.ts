@@ -159,4 +159,4 @@ const Esika: TestCard<ScryfallCard.ModalDfc> = {
   },
 };
 
-const Esika_Unknown: ScryfallCard.Unknown = Esika;
+const Esika_Unknown: ScryfallCard.Blob = Esika;

@@ -141,4 +141,4 @@ const Angel: TestCard<ScryfallCard.DoubleFacedToken> = {
   },
 };
 
-const Angel_Unknown: ScryfallCard.Unknown = Angel;
+const Angel_Unknown: ScryfallCard.Blob = Angel;

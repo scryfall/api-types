@@ -125,4 +125,4 @@ const DryadArbor: TestCard<ScryfallCard.Normal> = {
       "https://www.cardhoarder.com/cards/86929?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
   },
 };
-const DryadArbor_Unknown: ScryfallCard.Unknown = DryadArbor;
+const DryadArbor_Unknown: ScryfallCard.Blob = DryadArbor;
