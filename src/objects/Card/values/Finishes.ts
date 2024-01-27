@@ -69,7 +69,7 @@ export enum ScryfallExtendedFinish {
    */
   Ampersand = "ampersand",
   /**
-   * A Murders at Karlov Manor special style.
+   * The showcase finish style from Murders at Karlov Manor.
    */
   Dossier = "dossier",
 }
