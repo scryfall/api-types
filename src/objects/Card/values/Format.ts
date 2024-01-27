@@ -20,4 +20,5 @@ export type ScryfallFormat =
   | "oldschool"
   | "premodern"
   | "predh"
-  | "timeless";
+  | "timeless"
+  | "standardbrawl";
