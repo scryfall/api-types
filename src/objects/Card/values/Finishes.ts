@@ -69,7 +69,7 @@ export enum ScryfallExtendedFinish {
    */
   Ampersand = "ampersand",
   /**
-   * A special finish from Murders at Karlov Manor.
+   * Special dossier cards from Murders at Karlov Manor with extra handwritten flavor text and imagery..
    */
   InvisibleInk = "invisibleink",
 }
