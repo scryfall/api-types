@@ -68,6 +68,10 @@ export enum ScryfallExtendedFinish {
    * @deprecated This is replaced by {@link Embossed} instead.
    */
   Ampersand = "ampersand",
+  /**
+   * A special treatment applied to certain guild leader cards.
+   */
+  RavnicaCity = "ravnicacity",
 }
 
 export type ScryfallExtendedFinishLike = ScryfallExtendedFinish | `${ScryfallExtendedFinish}`;
