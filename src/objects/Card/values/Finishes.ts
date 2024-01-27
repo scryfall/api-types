@@ -68,6 +68,10 @@ export enum ScryfallExtendedFinish {
    * @deprecated This is replaced by {@link Embossed} instead.
    */
   Ampersand = "ampersand",
+  /**
+   * A special finish from Murders at Karlov Manor.
+   */
+  InvisibleInk = "invisibleink",
 }
 
 export type ScryfallExtendedFinishLike = ScryfallExtendedFinish | `${ScryfallExtendedFinish}`;
