@@ -13,7 +13,6 @@ export type ScryfallFormat =
   | "commander"
   | "oathbreaker"
   | "brawl"
-  | "historicbrawl"
   | "alchemy"
   | "paupercommander"
   | "duel"
