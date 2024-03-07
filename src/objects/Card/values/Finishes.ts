@@ -69,6 +69,18 @@ export enum ScryfallExtendedFinish {
    */
   Ampersand = "ampersand",
   /**
+   * The showcase finish style from Murders at Karlov Manor.
+   */
+  Dossier = "dossier",
+  /**
+   * Special dossier cards from Murders at Karlov Manor with extra handwritten flavor text and imagery..
+   */
+  InvisibleInk = "invisibleink",
+  /**
+   * A special treatment applied to certain guild leader cards.
+   */
+  RavnicaCity = "ravnicacity",
+  /**
    * Another showcase style from Murders at Karlov Manor.
    */
   Magnified = "magnified",

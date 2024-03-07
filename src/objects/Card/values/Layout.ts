@@ -48,6 +48,8 @@ export enum ScryfallLayout {
   ArtSeries = "art_series",
   /** A Magic card with two sides that are unrelated */
   ReversibleCard = "reversible_card",
+  /** A special type of multi-part enchantment from Murders at Karlov Manor */
+  Case = "case",
 }
 
 export type ScryfallLayoutLike = ScryfallLayout | `${ScryfallLayout}`;
