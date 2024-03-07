@@ -69,6 +69,10 @@ export enum ScryfallExtendedFinish {
    */
   Ampersand = "ampersand",
   /**
+   * A special treatment applied to certain guild leader cards.
+   */
+  RavnicaCity = "ravnicacity",
+  /**
    * Another showcase style from Murders at Karlov Manor.
    */
   Magnified = "magnified",
