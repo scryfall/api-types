@@ -69,6 +69,10 @@ export enum ScryfallExtendedFinish {
    */
   Ampersand = "ampersand",
   /**
+   * Special dossier cards from Murders at Karlov Manor with extra handwritten flavor text and imagery..
+   */
+  InvisibleInk = "invisibleink",
+  /**
    * A special treatment applied to certain guild leader cards.
    */
   RavnicaCity = "ravnicacity",
