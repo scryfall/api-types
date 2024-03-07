@@ -13,7 +13,7 @@ export * from "./Layout";
 export * from "./Legality";
 export * from "./ManaType";
 export * from "./Prices";
-export * from "./PrintAttribute";
+export * from "./PromoType";
 export * from "./PurchaseUris";
 export * from "./Rarity";
 export * from "./RelatedUris";
