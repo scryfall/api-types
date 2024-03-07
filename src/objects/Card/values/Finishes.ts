@@ -72,6 +72,10 @@ export enum ScryfallExtendedFinish {
    * A special treatment applied to certain guild leader cards.
    */
   RavnicaCity = "ravnicacity",
+  /**
+   * Another showcase style from Murders at Karlov Manor.
+   */
+  Magnified = "magnified",
 }
 
 export type ScryfallExtendedFinishLike = ScryfallExtendedFinish | `${ScryfallExtendedFinish}`;
