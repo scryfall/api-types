@@ -13,11 +13,11 @@ export type ScryfallFormat =
   | "commander"
   | "oathbreaker"
   | "brawl"
-  | "historicbrawl"
   | "alchemy"
   | "paupercommander"
   | "duel"
   | "oldschool"
   | "premodern"
   | "predh"
-  | "timeless";
+  | "timeless"
+  | "standardbrawl";
