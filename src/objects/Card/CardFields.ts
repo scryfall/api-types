@@ -1,5 +1,5 @@
 import {
-  ScryfallBasicFinishLike,
+  ScryfallFinishLike,
   ScryfallBorderColorLike,
   ScryfallColors,
   ScryfallFormat,
@@ -237,7 +237,7 @@ export namespace ScryfallCardFields.Print {
     /** True if this card was only released in a video game. */
     digital: boolean;
     /** An array of computer-readable flags that indicate if this card can come in foil, nonfoil, or etched finishes. */
-    finishes: ScryfallBasicFinishLike[];
+    finishes: ScryfallFinishLike[];
     /** This card’s frame effects, if any. */
     frame_effects?: ScryfallFrameEffectLike[];
     /** This card’s frame layout. */

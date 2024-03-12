@@ -1,4 +1,104 @@
-import { ScryfallExtendedFinish } from "./Finishes";
+export enum ScryfallFrameAppearance {
+  /**
+   * A Lord of the Rings appearance that made the card name, type line and oracle text area appear as scrolls.
+   */
+  Scroll = "scroll",
+  /**
+   * Cards with the appearance of a poster, e.g. the horror movie secret lairs.
+   */
+  Poster = "poster",
+  /**
+   * The showcase finish style from Murders at Karlov Manor.
+   */
+  Dossier = "dossier",
+  /**
+   * A special treatment applied to certain guild leader cards.
+   */
+  RavnicaCity = "ravnicacity",
+  /**
+   * Another showcase style from Murders at Karlov Manor.
+   */
+  Magnified = "magnified",
+}
+
+export enum ScryfallExtendedFinish {
+  /**
+   * A glossy finish.
+   */
+  Glossy = "glossy",
+  /**
+   * The silverfoil finish.
+   */
+  SilverFoil = "silverfoil",
+  /**
+   * The confetti foil finish. This looks glimmery like confetti laying on top of the card.
+   */
+  ConfettiFoil = "confettifoil",
+  /**
+   * Galaxy foil.
+   */
+  GalaxyFoil = "galaxyfoil",
+  /**
+   * Halo foil.
+   */
+  HaloFoil = "halofoil",
+  /**
+   * Surge foil
+   */
+  SurgeFoil = "surgefoil",
+  /**
+   * Double the rainbow vs normal cards.
+   */
+  DoubleRainbow = "doublerainbow",
+  /**
+   * A textured foil finish.
+   */
+  Textured = "textured",
+  /**
+   * A Phyrexian finish that involved dark cards embossed with shiny black gloss.
+   */
+  Oilslick = "oilslick",
+  /**
+   * Neon ink embossd on the card frame and art.
+   */
+  NeonInk = "neonink",
+  /**
+   * A Capenna foil style that embosses the art deco frame with shininess.
+   */
+  Gilded = "gilded",
+  /**
+   * Rainbow phyrexian symbols patterned over the card face.
+   * @trivia The name was a reference to "step and repeat", a style of pattern used in printing banners.
+   */
+  StepAndCompleat = "stepandcompleat",
+  /**
+   * A glossy finish with an emblem embossed on it.
+   *
+   * Examples include the D&D Ampersand logo or REX Jurassic Park logo.
+   */
+  Embossed = "embossed",
+  /**
+   * The Dungeons & Dragons glossy finish that superimposed an ampersand over the card.
+   *
+   * @deprecated This is replaced by {@link Embossed} instead.
+   */
+  Ampersand = "ampersand",
+  /**
+   * Special dossier cards from Murders at Karlov Manor with extra handwritten flavor text and imagery.
+   */
+  InvisibleInk = "invisibleink",
+}
+
+export enum ScryfallCardStock {
+  /**
+   * Cards printed on extra-thick cardstock.
+   */
+  Thick = "thick",
+  /**
+   * Cards printed on plastic stock.
+   */
+  Plastic = "plastic",
+}
 
 type ScryfallPrintAttribute =
   /**
@@ -122,10 +222,6 @@ type ScryfallPrintAttribute =
    */
   | "planeswalkerdeck"
   /**
-   * Cards printed on plastic stock.
-   */
-  | "plastic"
-  /**
    * Player rewards promos.
    */
   | "playerrewards"
@@ -133,10 +229,6 @@ type ScryfallPrintAttribute =
    * Play promos.
    */
   | "playpromo"
-  /**
-   * Cards with a “poster” appearance.
-   */
-  | "poster"
   /**
    * Premier e-Shop promos.
    */
@@ -148,7 +240,7 @@ type ScryfallPrintAttribute =
   /**
    * Cards found in promo packs.
    *
-   * @see "stamped"
+   * @see "stamped" Promop pack cards are usualy also stamped.
    */
   | "promopack"
   /**
@@ -165,10 +257,6 @@ type ScryfallPrintAttribute =
    * Due to Chinese censorship rules, some cards receive alternate art in Chinese releases.
    */
   | "schinesealtart"
-  /**
-   * A Lord of the Rings appearance that made the card name, type line and oracle text area appear as scrolls.
-   */
-  | "scroll"
   /**
    * Serialized cards. (001/500, etc.)
    */
@@ -204,10 +292,6 @@ type ScryfallPrintAttribute =
    */
   | "themepack"
   /**
-   * Cards printed on extra-thick cardstock.
-   */
-  | "thick"
-  /**
    * Tournament promo cards.
    */
   | "tourney"
@@ -216,4 +300,8 @@ type ScryfallPrintAttribute =
    */
   | "wizardsplaynetwork";
 
-export type ScryfallPromoType = ScryfallPrintAttribute | `${ScryfallExtendedFinish}`;
+export type ScryfallPromoType =
+  | ScryfallPrintAttribute
+  | `${ScryfallFrameAppearance}`
+  | `${ScryfallExtendedFinish}`
+  | `${ScryfallCardStock}`;
