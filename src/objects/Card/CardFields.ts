@@ -359,8 +359,10 @@ export namespace ScryfallCardFields.Print {
     artist_ids?: string[];
     /**
      * The lit Unfinity attractions lights on this card, if any.
+     *
+     * This will be an array of numbers ranging from 1 to 6 inclusive.
      */
-    attraction_lights?: (1 | 2 | 3 | 4 | 5 | 6)[];
+    attraction_lights?: number[];
     /**
      * Whether this card is found in boosters.
      */
