@@ -159,26 +159,15 @@ export namespace ScryfallCardFields.Gameplay {
     /**
      * This card’s hand modifier, if it is Vanguard card. This value will contain a delta, such as -1.
      */
-    hand_modifier: string;
+    hand_modifier?: string;
     /**
      * This card’s life modifier, if it is Vanguard card. This value will contain a delta, such as +2.
      */
-    life_modifier: string;
-  };
-
-  /**
-   * On multi-face cards, these fields are duplicated at the card and print level.
-   */
-  type AllFacesAndSides = {
-    name: string;
-    type_line: string;
-    mana_cost?: string;
+    life_modifier?: string;
   };
 
   /**
    * Combat stats: power, toughness, loyalty, and defense.
-   *
-   * These are automatically part of {@link CardFaceSpecific}.
    */
   export type CombatStats = {
     /**
@@ -200,13 +189,12 @@ export namespace ScryfallCardFields.Gameplay {
   };
 
   /**
-   * A definition implying this object will never, ever have combat stats.
+   * On multi-face cards, these fields are duplicated at the card and print level.
    */
-  export type NoCombatStats = CombatStats & {
-    defense?: undefined;
-    loyalty?: undefined;
-    power?: undefined;
-    toughness?: undefined;
+  type AllFacesAndSides = {
+    name: string;
+    type_line: string;
+    mana_cost?: string;
   };
 
   /**
@@ -236,7 +224,8 @@ export namespace ScryfallCardFields.Gameplay {
      * The Oracle text for this card, if any.
      */
     oracle_text: string;
-  } & CombatStats;
+  } & CombatStats &
+    VanguardStats;
 
   export type CardSideSpecific = AllFacesAndSides & {
     /**
@@ -590,15 +579,6 @@ export namespace ScryfallCardFields.Print {
      * The localized type line printed on this card, if any.
      */
     printed_type_line?: string;
-  };
-
-  /**
-   * An implication this card will have no localisation data.
-   */
-  export type NotLocalized = {
-    printed_name?: undefined;
-    printed_text?: undefined;
-    printed_type_line?: undefined;
   };
 
   type VariationInfo = {

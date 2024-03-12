@@ -74,10 +74,6 @@ export namespace ScryfallCard {
 
   type DoubleSidedSplit = MultiFace<ScryfallCardFace.DoubleSided> & Layout<ScryfallLayoutGroup.DoubleSidedSplitType>;
 
-  type AlwaysOversized = {
-    oversized: true;
-  };
-
   /** A card with the Normal layout. */
   export type Normal = Layout<ScryfallLayout.Normal> & SingleFace;
 
@@ -103,16 +99,13 @@ export namespace ScryfallCard {
   export type Battle = Layout<ScryfallLayout.Battle> & SingleFace;
 
   /** A card with the Planar layout. */
-  export type Planar = Layout<ScryfallLayout.Planar> & SingleFace & AlwaysOversized;
+  export type Planar = Layout<ScryfallLayout.Planar> & SingleFace;
 
   /** A card with the Scheme layout. */
-  export type Scheme = Layout<ScryfallLayout.Scheme> & SingleFace & AlwaysOversized;
+  export type Scheme = Layout<ScryfallLayout.Scheme> & SingleFace;
 
   /** A card with the Vanguard layout. */
-  export type Vanguard = Layout<ScryfallLayout.Vanguard> &
-    SingleFace &
-    ScryfallCardFields.Gameplay.VanguardStats &
-    ScryfallCardFields.Gameplay.NoCombatStats;
+  export type Vanguard = Layout<ScryfallLayout.Vanguard> & SingleFace;
 
   /** A card with the Token layout. */
   export type Token = Layout<ScryfallLayout.Token> & SingleFace;
