@@ -1,5 +1,4 @@
 import { ScryfallObject } from "../Object";
-import { Decimal, Uri } from "../../internal";
 import { ScryfallColors } from "../Card/values";
 
 /**
@@ -30,12 +29,16 @@ export type ScryfallCardSymbol = ScryfallObject.Object<ScryfallObject.ObjectType
   represents_mana: boolean;
   /**
    * A decimal number representing this symbol’s mana value (also knowns as the converted mana cost). Note that mana symbols from funny sets can have fractional mana values.
+   *
+   * @type Decimal
    */
-  mana_value?: Decimal | null;
+  mana_value?: number | null;
   /**
    * @deprecated Use {@link ScryfallCardSymbol.mana_value} instead.
+   *
+   * @type Decimal
    */
-  cmc?: Decimal | null;
+  cmc?: number | null;
   /**
    * True if this symbol appears in a mana cost on any Magic card. For example {20} has this field set to false because {20} only appears in Oracle text, not mana costs.
    */
@@ -62,6 +65,8 @@ export type ScryfallCardSymbol = ScryfallObject.Object<ScryfallObject.ObjectType
   gatherer_alternates?: string[] | null;
   /**
    * A URI to an SVG image of this symbol on Scryfall’s CDNs.
+   *
+   * @type URI
    */
-  svg_uri?: Uri;
+  svg_uri?: string;
 };

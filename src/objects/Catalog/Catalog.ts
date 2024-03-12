@@ -1,5 +1,4 @@
 import { ScryfallObject } from "../Object";
-import { Uri, Integer } from "../../internal";
 
 /**
  * A catalog of values.
@@ -9,12 +8,16 @@ import { Uri, Integer } from "../../internal";
 export type ScryfallCatalog = ScryfallObject.Object<ScryfallObject.ObjectType.Catalog> & {
   /**
    * A link to the current catalog on Scryfall’s API
+   *
+   * @type URI
    */
-  uri: Uri;
+  uri: string;
   /**
    * The number of items in the `data` array
+   *
+   * @type Integer
    */
-  total_values: Integer;
+  total_values: number;
   /**
    * An array of datapoints, as strings
    */

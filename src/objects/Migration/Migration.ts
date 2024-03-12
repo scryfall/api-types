@@ -1,5 +1,4 @@
 import { ScryfallObject } from "../Object";
-import { Uri, Uuid, IsoDate } from "../../internal";
 
 export enum ScryfallMigrationStrategy {
   Merge = "merge",
@@ -16,28 +15,38 @@ export type ScryfallMigrationStrategyLike = ScryfallMigrationStrategy | `${Scryf
 export type ScryfallMigration = ScryfallObject.Object<ScryfallObject.ObjectType.Migration> & {
   /**
    * A link to the current object on Scryfall's API
+   *
+   * @type URI
    */
-  uri: Uri;
+  uri: string;
   /**
    * This migration's unique UUID
+   *
+   * @type UUID
    */
-  id: Uuid;
+  id: string;
   /**
    * The date this migration was performed
+   *
+   * @type IsoDate
    */
-  performed_at: IsoDate;
+  performed_at: string;
   /**
    * A computer-readable indicator of the migration strategy.
    */
   migration_strategy: ScryfallMigrationStrategyLike;
   /**
    * The `id` of the affected API Card object
+   *
+   * @type UUID
    */
-  old_scryfall_id: Uuid;
+  old_scryfall_id: string;
   /**
    * The replacement `id` of the API Card object if this is a `merge`
+   *
+   * @type UUID
    */
-  new_scryfall_id?: Uuid;
+  new_scryfall_id?: string;
   /**
    * A note left by the Scryfall team about this migration
    */
@@ -46,13 +55,4 @@ export type ScryfallMigration = ScryfallObject.Object<ScryfallObject.ObjectType.
    * Additional context Scryfall has provided for this migration, designed to be human-read only
    */
   metadata?: object;
-} & (
-    | {
-        migration_strategy: ScryfallMigrationStrategy.Merge | `${ScryfallMigrationStrategy.Merge}`;
-        new_scryfall_id: Uuid;
-      }
-    | {
-        migration_strategy: ScryfallMigrationStrategy.Delete | `${ScryfallMigrationStrategy.Delete}`;
-        new_scryfall_id?: undefined;
-      }
-  );
+};

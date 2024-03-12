@@ -1,5 +1,4 @@
 import { ScryfallObject } from "../Object";
-import { Integer, Uri } from "../../internal";
 import { ScryfallCard } from "../Card";
 import { ScryfallMigration } from "../Migration";
 import { ScryfallRuling } from "../Ruling";
@@ -28,12 +27,19 @@ export namespace ScryfallList {
     has_more: boolean;
     /**
      * If there is a page beyond the current page, this field will contain a full API URI to that page. You may submit a HTTP GET request to that URI to continue paginating forward on this List.
+     *
+     * This is only defined when `has_more` is true.
+     *
+     * @type URI
      */
-    next_page?: Uri;
+    next_page?: string;
     /**
      * If this is a list of Card objects, this field will contain the total number of cards found across all pages.
+     * Otherwise this field will be undefined.
+     *
+     * @type Integer
      */
-    total_cards?: Integer;
+    total_cards?: number;
     /**
      * An array of human-readable warnings issued when generating this list, as strings.
      *
@@ -42,23 +48,7 @@ export namespace ScryfallList {
      * You should fix the warnings and re-submit your request.
      */
     warnings?: string[];
-  } & (
-      | {
-          has_more: true;
-          next_page: Uri;
-        }
-      | {
-          has_more: false;
-          next_page?: undefined;
-        }
-    ) &
-    (T extends ScryfallCard.AbstractCard
-      ? {
-          total_cards: Integer;
-        }
-      : {
-          total_cards?: undefined;
-        });
+  };
 
   /**
    * A list of cards.

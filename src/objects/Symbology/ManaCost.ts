@@ -1,5 +1,4 @@
 import { ScryfallObject } from "../Object";
-import { Decimal } from "../../internal";
 import { ScryfallColors } from "../Card/values";
 
 /**
@@ -14,8 +13,10 @@ export type ScryfallManaCost = ScryfallObject.Object<ScryfallObject.ObjectType.M
   cost: string;
   /**
    * The mana value. If you submit Un-set mana symbols, this decimal could include fractional parts
+   *
+   * @type Decimal
    */
-  cmc: Decimal;
+  cmc: number;
   /**
    * The colors of the given cost
    */
