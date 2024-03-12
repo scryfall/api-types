@@ -20,5 +20,3 @@ export enum ScryfallImageStatus {
    */
   HighResScan = "highres_scan",
 }
-
-export type ScryfallImageStatusLike = ScryfallImageStatus | `${ScryfallImageStatus}`;

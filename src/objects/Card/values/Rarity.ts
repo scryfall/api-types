@@ -6,5 +6,3 @@ export enum ScryfallRarity {
   Mythic = "mythic",
   Bonus = "bonus",
 }
-
-export type ScryfallRarityLike = ScryfallRarity | `${ScryfallRarity}`;

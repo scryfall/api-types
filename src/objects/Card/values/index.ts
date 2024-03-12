@@ -8,6 +8,7 @@ export * from "./Game";
 export * from "./ImageSize";
 export * from "./ImageStatus";
 export * from "./ImageUris";
+export * from "./LegalitiesField";
 export * from "./LanguageCode";
 export * from "./Layout";
 export * from "./Legality";

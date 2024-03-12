@@ -1,5 +1,5 @@
 import { ScryfallObject } from "../Object";
-import { SetTypeLike } from "./values";
+import { SetType } from "./values";
 
 /**
  * Description of a Magic card set.
@@ -38,7 +38,7 @@ export type ScryfallSet = ScryfallObject.Object<ScryfallObject.ObjectType.Set> &
   /**
    * A computer-readable classification for this set. See below.
    */
-  set_type: SetTypeLike;
+  set_type: `${SetType}`;
   /**
    * The date the set was released or the first card was printed in the set (in GMT-8 Pacific time).
    *

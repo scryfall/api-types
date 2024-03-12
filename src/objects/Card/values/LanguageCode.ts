@@ -39,5 +39,3 @@ export enum ScryfallLanguageCode {
   /** Phyrexian */
   Phyrexian = "ph",
 }
-
-export type ScryfallLanguageCodeLike = ScryfallLanguageCode | `${ScryfallLanguageCode}`;

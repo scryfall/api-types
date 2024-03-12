@@ -4,5 +4,3 @@ export enum ScryfallLegality {
   Restricted = "restricted",
   Banned = "banned",
 }
-
-export type ScryfallLegalityLike = ScryfallLegality | `${ScryfallLegality}`;

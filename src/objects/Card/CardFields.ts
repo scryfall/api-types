@@ -1,29 +1,26 @@
 import {
-  ScryfallFinishLike,
-  ScryfallBorderColorLike,
+  ScryfallBorderColor,
   ScryfallColors,
-  ScryfallFormat,
-  ScryfallFrameEffectLike,
-  ScryfallFrameLike,
-  ScryfallGameLike,
-  ScryfallImageStatusLike,
+  ScryfallFinish,
+  ScryfallFrame,
+  ScryfallFrameEffect,
+  ScryfallGame,
+  ScryfallImageStatus,
   ScryfallImageUris,
-  ScryfallLanguageCodeLike,
-  ScryfallLayoutLike,
-  ScryfallLegalityLike,
+  ScryfallLanguageCode,
+  ScryfallLayout,
+  ScryfallLegalitiesField,
   ScryfallPrices,
   ScryfallPromoType,
   ScryfallPurchaseUris,
-  ScryfallRarityLike,
+  ScryfallRarity,
   ScryfallRelatedUris,
-  ScryfallSecurityStampLike,
+  ScryfallSecurityStamp,
 } from "./values";
 import { ScryfallCardFace } from "./CardFace";
-import { SetTypeLike } from "../Set/values";
 import { ScryfallRelatedCard } from "./RelatedCard";
 import { ScryfallManaTypes } from "./values/ManaType";
-
-type LegalityRecord = Record<ScryfallFormat, ScryfallLegalityLike>;
+import { SetType } from "../Set/values";
 
 /**
  * A collection of types related to each possible card field.
@@ -49,13 +46,13 @@ export namespace ScryfallCardFields.Core {
     /**
      * A language code for this printing.
      */
-    lang: ScryfallLanguageCodeLike;
+    lang: `${ScryfallLanguageCode}`;
     /**
      * A code for this card’s layout.
      *
      * @see {@link https://scryfall.com/docs/api/layouts}
      */
-    layout: ScryfallLayoutLike;
+    layout: `${ScryfallLayout}`;
     /**
      * A link to where you can begin paginating all re/prints for this card on Scryfall’s API.
      *
@@ -142,7 +139,7 @@ export namespace ScryfallCardFields.Gameplay {
     /**
      * An object describing the legality of this card across play formats. Possible legalities are legal, not_legal, restricted, and banned.
      */
-    legalities: LegalityRecord;
+    legalities: ScryfallLegalitiesField;
   };
 
   /**
@@ -370,7 +367,7 @@ export namespace ScryfallCardFields.Print {
     /**
      * This card’s border color: black, white, borderless, silver, or gold.
      */
-    border_color: ScryfallBorderColorLike;
+    border_color: `${ScryfallBorderColor}`;
     /**
      * This card’s collector number. Note that collector numbers can contain non-numeric characters, such as letters or ★.
      */
@@ -386,15 +383,15 @@ export namespace ScryfallCardFields.Print {
     /**
      * An array of computer-readable flags that indicate if this card can come in foil, nonfoil, or etched finishes.
      */
-    finishes: ScryfallFinishLike[];
+    finishes: `${ScryfallFinish}`[];
     /**
      * This card’s frame effects, if any.
      */
-    frame_effects?: ScryfallFrameEffectLike[];
+    frame_effects?: `${ScryfallFrameEffect}`[];
     /**
      * This card’s frame layout.
      */
-    frame: ScryfallFrameLike;
+    frame: `${ScryfallFrame}`;
     /**
      * True if this card’s artwork is larger than normal.
      */
@@ -402,7 +399,7 @@ export namespace ScryfallCardFields.Print {
     /**
      * A list of games that this card print is available in, paper, arena, and/or mtgo.
      */
-    games: ScryfallGameLike[];
+    games: `${ScryfallGame}`[];
     /**
      * True if this card’s imagery is high resolution.
      */
@@ -416,7 +413,7 @@ export namespace ScryfallCardFields.Print {
     /**
      * A computer-readable indicator for the state of this card’s image, one of missing, placeholder, lowres, or highres_scan.
      */
-    image_status: ScryfallImageStatusLike;
+    image_status: `${ScryfallImageStatus}`;
     /**
      * True if this card is oversized.
      */
@@ -440,7 +437,7 @@ export namespace ScryfallCardFields.Print {
     /**
      * This card’s rarity.
      */
-    rarity: ScryfallRarityLike;
+    rarity: `${ScryfallRarity}`;
     /**
      * An object providing URIs to this card’s listing on other Magic: The Gathering online resources.
      */
@@ -474,7 +471,7 @@ export namespace ScryfallCardFields.Print {
     /**
      * The type of set this printing is in.
      */
-    set_type: SetTypeLike;
+    set_type: `${SetType}`;
     /**
      * A link to this card’s set object on Scryfall’s API.
      *
@@ -502,7 +499,7 @@ export namespace ScryfallCardFields.Print {
     /**
      * The security stamp on this card, if any.
      */
-    security_stamp?: ScryfallSecurityStampLike;
+    security_stamp?: `${ScryfallSecurityStamp}`;
     /**
      * Preview information for this print, if any.
      */

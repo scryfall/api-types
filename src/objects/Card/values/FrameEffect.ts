@@ -46,5 +46,3 @@ export enum ScryfallFrameEffect {
   /** The cards have the Upside Down transforming marks */
   UpsidedownDfc = "upsidedowndfc",
 }
-
-export type ScryfallFrameEffectLike = ScryfallFrameEffect | `${ScryfallFrameEffect}`;

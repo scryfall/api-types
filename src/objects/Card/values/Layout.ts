@@ -52,8 +52,6 @@ export enum ScryfallLayout {
   Case = "case",
 }
 
-export type ScryfallLayoutLike = ScryfallLayout | `${ScryfallLayout}`;
-
 /**
  * Groupings of layouts.
  */

@@ -55,5 +55,3 @@ export enum ScryfallImageSize {
    */
   BorderCrop = "border_crop",
 }
-
-export type ScryfallImageSizeLike = ScryfallImageSize | `${ScryfallImageSize}`;

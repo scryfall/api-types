@@ -27,5 +27,3 @@ export enum ScryfallGame {
    */
   Sega = "sega",
 }
-
-export type ScryfallGameLike = ScryfallGame | `${ScryfallGame}`;

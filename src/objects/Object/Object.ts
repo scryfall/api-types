@@ -52,8 +52,6 @@ export namespace ScryfallObject {
     Set = "set",
   }
 
-  export type ObjectTypeLike = ObjectType | `${ObjectType}`;
-
   /**
    * The abstract base type of Scryfall objects.
    */

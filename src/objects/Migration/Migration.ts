@@ -5,8 +5,6 @@ export enum ScryfallMigrationStrategy {
   Delete = "delete",
 }
 
-export type ScryfallMigrationStrategyLike = ScryfallMigrationStrategy | `${ScryfallMigrationStrategy}`;
-
 /**
  * A data migration.
  *
@@ -34,7 +32,7 @@ export type ScryfallMigration = ScryfallObject.Object<ScryfallObject.ObjectType.
   /**
    * A computer-readable indicator of the migration strategy.
    */
-  migration_strategy: ScryfallMigrationStrategyLike;
+  migration_strategy: `${ScryfallMigrationStrategy}`;
   /**
    * The `id` of the affected API Card object
    *

@@ -3,5 +3,3 @@ export enum ScryfallFinish {
   Foil = "foil",
   Etched = "etched",
 }
-
-export type ScryfallFinishLike = ScryfallFinish | `${ScryfallFinish}`;
