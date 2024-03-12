@@ -1,6 +1,6 @@
 export * from "./BorderColor";
 export * from "./Color";
-export * from "./Finishes";
+export * from "./Finish";
 export * from "./Format";
 export * from "./Frame";
 export * from "./FrameEffect";
@@ -13,7 +13,7 @@ export * from "./Layout";
 export * from "./Legality";
 export * from "./ManaType";
 export * from "./Prices";
-export * from "./PrintAttribute";
+export * from "./PromoType";
 export * from "./PurchaseUris";
 export * from "./Rarity";
 export * from "./RelatedUris";

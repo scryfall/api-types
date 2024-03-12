@@ -1,13 +1,16 @@
 {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "files.insertFinalNewline": true,
-    "editor.trimAutoWhitespace": true,
-    "files.trimTrailingWhitespace": true,
     "editor.rulers": [140],
+    "editor.tabSize": 2,
+    "editor.trimAutoWhitespace": true,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "prettier.endOfLine": "lf",
     "[json]": {
-      "editor.formatOnSave": true,
       "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
     },
     "[typescript]": {
       "editor.formatOnSave": true
@@ -15,5 +18,4 @@
     "files.exclude": {
       "node_modules": true
     },
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
   }
