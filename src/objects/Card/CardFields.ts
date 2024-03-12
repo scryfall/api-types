@@ -33,11 +33,17 @@ export namespace ScryfallCardFields {}
 
 export namespace ScryfallCardFields.Core {
   export type ScryfallReferences = {
-    /** A unique ID for this card in Scryfall’s database. */
+    /**
+     * A unique ID for this card in Scryfall’s database.
+     */
     id: Uuid;
-    /** A unique ID for this card’s oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable variants, etc). Always present except for the reversible_card layout where it will be absent; oracle_id will be found on each face instead. */
+    /**
+     * A unique ID for this card’s oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable variants, etc). Always present except for the reversible_card layout where it will be absent; oracle_id will be found on each face instead.
+     */
     oracle_id: Uuid;
-    /** A language code for this printing. */
+    /**
+     * A language code for this printing.
+     */
     lang: ScryfallLanguageCodeLike;
     /**
      * A code for this card’s layout.
@@ -45,30 +51,52 @@ export namespace ScryfallCardFields.Core {
      * @see {@link https://scryfall.com/docs/api/layouts}
      */
     layout: ScryfallLayoutLike;
-    /** A link to where you can begin paginating all re/prints for this card on Scryfall’s API. */
+    /**
+     * A link to where you can begin paginating all re/prints for this card on Scryfall’s API.
+     */
     prints_search_uri: Uri;
-    /** A link to this card’s rulings list on Scryfall’s API. */
+    /**
+     * A link to this card’s rulings list on Scryfall’s API.
+     */
     rulings_uri: Uri;
-    /** A link to this card’s permapage on Scryfall’s website. */
+    /**
+     * A link to this card’s permapage on Scryfall’s website.
+     */
     scryfall_uri: Uri;
-    /** A link to this card object on Scryfall’s API.  */
+    /**
+     * A link to this card object on Scryfall’s API.
+     */
     uri: Uri;
   };
 
   export type VendorReferences = {
-    /** This card’s Arena ID, if any. A large percentage of cards are not available on Arena and do not have this ID. */
+    /**
+     * This card’s Arena ID, if any. A large percentage of cards are not available on Arena and do not have this ID.
+     */
     arena_id?: Integer;
-    /** This card’s Magic Online ID (also known as the Catalog ID), if any. A large percentage of cards are not available on Magic Online and do not have this ID. */
+    /**
+     * This card’s Magic Online ID (also known as the Catalog ID), if any. A large percentage of cards are not available on Magic Online and do not have this ID.
+     */
     mtgo_id?: Integer;
-    /** This card’s foil Magic Online ID (also known as the Catalog ID), if any. A large percentage of cards are not available on Magic Online and do not have this ID. */
+    /**
+     * This card’s foil Magic Online ID (also known as the Catalog ID), if any. A large percentage of cards are not available on Magic Online and do not have this ID.
+     */
     mtgo_foil_id?: Integer;
-    /** This card’s multiverse IDs on Gatherer, if any, as an array of integers. Note that Scryfall includes many promo cards, tokens, and other esoteric objects that do not have these identifiers. */
+    /**
+     * This card’s multiverse IDs on Gatherer, if any, as an array of integers. Note that Scryfall includes many promo cards, tokens, and other esoteric objects that do not have these identifiers.
+     */
     multiverse_ids?: Integer[];
-    /** This card’s ID on TCGplayer’s API, also known as the productId. */
+    /**
+     * This card’s ID on TCGplayer’s API, also known as the productId.
+     */
     tcgplayer_id?: Integer;
-    /** This card’s ID on TCGplayer’s API, for its etched version if that version is a separate product. */
+    /**
+     * This card’s ID on TCGplayer’s API, for its etched version if that version is a separate product.
+     */
     tcgplayer_etched_id?: Integer;
-    /** This card’s ID on Cardmarket’s API, also known as the idProduct. */
+    /**
+     * This card’s ID on Cardmarket’s API, also known as the idProduct.
+     */
     cardmarket_id?: Integer;
   };
 
@@ -80,9 +108,13 @@ export namespace ScryfallCardFields.Gameplay {
    * These fields are always at the root level for every layout.
    */
   export type RootProperties = {
-    /** If this card is closely related to other cards, this property will be an array with Related Card Objects. */
+    /**
+     * If this card is closely related to other cards, this property will be an array with Related Card Objects.
+     */
     all_parts?: ScryfallRelatedCard[];
-    /** An object describing the legality of this card across play formats. Possible legalities are legal, not_legal, restricted, and banned. */
+    /**
+     * An object describing the legality of this card across play formats. Possible legalities are legal, not_legal, restricted, and banned.
+     */
     legalities: LegalityRecord;
   };
 
@@ -90,7 +122,9 @@ export namespace ScryfallCardFields.Gameplay {
    * The card faces field. The faces will be of type T.
    */
   export type CardFaces<T extends ScryfallCardFace.AbstractCardFace> = {
-    /** An array of Card Face objects, if this card is multifaced. */
+    /**
+     * An array of Card Face objects, if this card is multifaced.
+     */
     card_faces: T[];
   };
 
@@ -98,13 +132,19 @@ export namespace ScryfallCardFields.Gameplay {
    * These fields are present only for Vanguards.
    */
   export type VanguardStats = {
-    /** This card’s hand modifier, if it is Vanguard card. This value will contain a delta, such as -1. */
+    /**
+     * This card’s hand modifier, if it is Vanguard card. This value will contain a delta, such as -1.
+     */
     hand_modifier: string;
-    /** This card’s life modifier, if it is Vanguard card. This value will contain a delta, such as +2. */
+    /**
+     * This card’s life modifier, if it is Vanguard card. This value will contain a delta, such as +2.
+     */
     life_modifier: string;
   };
 
-  /** On multi-face cards, these fields are duplicated at the card and print level. */
+  /**
+   * On multi-face cards, these fields are duplicated at the card and print level.
+   */
   type AllFacesAndSides = {
     name: string;
     type_line: string;
@@ -117,17 +157,27 @@ export namespace ScryfallCardFields.Gameplay {
    * These are automatically part of {@link CardFaceSpecific}.
    */
   export type CombatStats = {
-    /** This card's defense, if any. */
+    /**
+     * This card's defense, if any.
+     */
     defense?: string;
-    /** This loyalty if any. Note that some cards have loyalties that are not numeric, such as X. */
+    /**
+     * This loyalty if any. Note that some cards have loyalties that are not numeric, such as X.
+     */
     loyalty?: string;
-    /** This card’s power, if any. Note that some cards have powers that are not numeric, such as `"*"`. */
+    /**
+     * This card’s power, if any. Note that some cards have powers that are not numeric, such as `"*"`.
+     */
     power?: string;
-    /** This card’s toughness, if any. Note that some cards have toughnesses that are not numeric, such as `"*"`. */
+    /**
+     * This card’s toughness, if any. Note that some cards have toughnesses that are not numeric, such as `"*"`.
+     */
     toughness?: string;
   };
 
-  /** A definition implying this object will never, ever have combat stats. */
+  /**
+   * A definition implying this object will never, ever have combat stats.
+   */
   export type NoCombatStats = CombatStats & {
     defense?: undefined;
     loyalty?: undefined;
@@ -142,24 +192,40 @@ export namespace ScryfallCardFields.Gameplay {
    * - Card face level for a multi-face card.
    */
   export type CardFaceSpecific = AllFacesAndSides & {
-    /** The colors in this card’s color indicator, if any. A null value for this field indicates the card does not have one. */
+    /**
+     * The colors in this card’s color indicator, if any. A null value for this field indicates the card does not have one.
+     */
     color_indicator?: ScryfallColors;
-    /** Nullable 	The mana cost for this card. This value will be any empty string "" if the cost is absent. Remember that per the game rules, a missing mana cost and a mana cost of {0} are different  Multi-faced cards will report this value in card faces. */
+    /**
+     * Nullable 	The mana cost for this card. This value will be any empty string "" if the cost is absent. Remember that per the game rules, a missing mana cost and a mana cost of {0} are different  Multi-faced cards will report this value in card faces.
+     */
     mana_cost?: string;
-    /** The name of this card. */
+    /**
+     * The name of this card.
+     */
     name: string;
-    /** The type line of this card. */
+    /**
+     * The type line of this card.
+     */
     type_line: string;
-    /** The Oracle text for this card, if any. */
+    /**
+     * The Oracle text for this card, if any.
+     */
     oracle_text: string;
   } & CombatStats;
 
   export type CardSideSpecific = AllFacesAndSides & {
-    /** The name of this card. */
+    /**
+     * The name of this card.
+     */
     name: string;
-    /** The type line of this card. */
+    /**
+     * The type line of this card.
+     */
     type_line: string;
-    /** This card’s colors, if the overall card has colors defined by the rules. Otherwise the colors will be on the card_faces objects. */
+    /**
+     * This card’s colors, if the overall card has colors defined by the rules. Otherwise the colors will be on the card_faces objects.
+     */
     colors: ScryfallColors;
   };
 
@@ -169,34 +235,58 @@ export namespace ScryfallCardFields.Gameplay {
    * - Card face level for reversible layouts.
    */
   export type CardSpecific = AllFacesAndSides & {
-    /** The card’s mana value. Note that some funny cards have fractional mana costs. */
+    /**
+     * The card’s mana value. Note that some funny cards have fractional mana costs.
+     */
     cmc: Decimal;
-    /** This card’s color identity. */
+    /**
+     * This card’s color identity.
+     */
     color_identity: ScryfallColors;
-    /** This card’s overall rank/popularity on EDHREC. Not all cards are ranked. */
+    /**
+     * This card’s overall rank/popularity on EDHREC. Not all cards are ranked.
+     */
     edhrec_rank?: Integer;
-    /** An array of keywords that this card uses, such as 'Flying' and 'Cumulative upkeep'. */
+    /**
+     * An array of keywords that this card uses, such as 'Flying' and 'Cumulative upkeep'.
+     */
     keywords: string[];
-    /** The name of this card. If this card has multiple faces, this field will contain both names separated by ␣//␣. */
+    /**
+     * The name of this card. If this card has multiple faces, this field will contain both names separated by ␣//␣.
+     */
     name: string;
-    /** This card’s rank/popularity on Penny Dreadful. Not all cards are ranked. */
+    /**
+     * This card’s rank/popularity on Penny Dreadful. Not all cards are ranked.
+     */
     penny_rank?: Integer;
-    /** Colors of mana that this card could produce. */
+    /**
+     * Colors of mana that this card could produce.
+     */
     produced_mana?: ScryfallManaTypes;
-    /** True if this card is on the Reserved List. */
+    /**
+     * True if this card is on the Reserved List.
+     */
     reserved: boolean;
-    /** The type line of this card. */
+    /**
+     * The type line of this card.
+     */
     type_line: string;
   };
 }
 
 export namespace ScryfallCardFields.Print {
   type PreviewInfo = {
-    /** The date this card was previewed. */
+    /**
+     * The date this card was previewed.
+     */
     previewed_at: IsoDate;
-    /** A link to the preview for this card. */
+    /**
+     * A link to the preview for this card.
+     */
     source_uri: Uri;
-    /** The name of the source that previewed this card. */
+    /**
+     * The name of the source that previewed this card.
+     */
     source: string;
   };
 
@@ -220,77 +310,149 @@ export namespace ScryfallCardFields.Print {
    * - Card face level for a reversible card.
    */
   export type CardSpecific = {
-    /** The name of the illustrator of this card. Newly spoiled cards may not have this field yet. */
+    /**
+     * The name of the illustrator of this card. Newly spoiled cards may not have this field yet.
+     */
     artist?: string;
-    /** The IDs of the artists that illustrated this card. Newly spoiled cards may not have this field yet. */
+    /**
+     * The IDs of the artists that illustrated this card. Newly spoiled cards may not have this field yet.
+     */
     artist_ids?: Uuid[];
-    /** The lit Unfinity attractions lights on this card, if any. */
+    /**
+     * The lit Unfinity attractions lights on this card, if any.
+     */
     attraction_lights?: (1 | 2 | 3 | 4 | 5 | 6)[];
-    /** Whether this card is found in boosters. */
+    /**
+     * Whether this card is found in boosters.
+     */
     booster: boolean;
-    /** This card’s border color: black, white, borderless, silver, or gold. */
+    /**
+     * This card’s border color: black, white, borderless, silver, or gold.
+     */
     border_color: ScryfallBorderColorLike;
-    /** This card’s collector number. Note that collector numbers can contain non-numeric characters, such as letters or ★. */
+    /**
+     * This card’s collector number. Note that collector numbers can contain non-numeric characters, such as letters or ★.
+     */
     collector_number: string;
-    /** True if you should consider avoiding use of this print downstream. */
+    /**
+     * True if you should consider avoiding use of this print downstream.
+     */
     content_warning?: boolean;
-    /** True if this card was only released in a video game. */
+    /**
+     * True if this card was only released in a video game.
+     */
     digital: boolean;
-    /** An array of computer-readable flags that indicate if this card can come in foil, nonfoil, or etched finishes. */
+    /**
+     * An array of computer-readable flags that indicate if this card can come in foil, nonfoil, or etched finishes.
+     */
     finishes: ScryfallFinishLike[];
-    /** This card’s frame effects, if any. */
+    /**
+     * This card’s frame effects, if any.
+     */
     frame_effects?: ScryfallFrameEffectLike[];
-    /** This card’s frame layout. */
+    /**
+     * This card’s frame layout.
+     */
     frame: ScryfallFrameLike;
-    /** True if this card’s artwork is larger than normal. */
+    /**
+     * True if this card’s artwork is larger than normal.
+     */
     full_art: boolean;
-    /** A list of games that this card print is available in, paper, arena, and/or mtgo. */
+    /**
+     * A list of games that this card print is available in, paper, arena, and/or mtgo.
+     */
     games: ScryfallGameLike[];
-    /** True if this card’s imagery is high resolution. */
+    /**
+     * True if this card’s imagery is high resolution.
+     */
     highres_image: boolean;
-    /** A unique identifier for the card artwork that remains consistent across reprints. Newly spoiled cards may not have this field yet. */
+    /**
+     * A unique identifier for the card artwork that remains consistent across reprints. Newly spoiled cards may not have this field yet.
+     */
     illustration_id?: Uuid;
-    /** A computer-readable indicator for the state of this card’s image, one of missing, placeholder, lowres, or highres_scan. */
+    /**
+     * A computer-readable indicator for the state of this card’s image, one of missing, placeholder, lowres, or highres_scan.
+     */
     image_status: ScryfallImageStatusLike;
-    /** True if this card is oversized. */
+    /**
+     * True if this card is oversized.
+     */
     oversized: boolean;
-    /** An object containing daily price information for this card, including usd, usd_foil, usd_etched, eur, eur_foil, eur_etched, and tix prices, as strings. */
+    /**
+     * An object containing daily price information for this card, including usd, usd_foil, usd_etched, eur, eur_foil, eur_etched, and tix prices, as strings.
+     */
     prices: ScryfallPrices;
-    /** True if this card is a promotional print. */
+    /**
+     * True if this card is a promotional print.
+     */
     promo: boolean;
-    /** An array of strings describing what categories of promo cards this card falls into. */
+    /**
+     * An array of strings describing what categories of promo cards this card falls into.
+     */
     promo_types?: ScryfallPromoType[];
-    /** An object providing URIs to this card’s listing on major marketplaces. Omitted if the card is unpurchaseable. */
+    /**
+     * An object providing URIs to this card’s listing on major marketplaces. Omitted if the card is unpurchaseable.
+     */
     purchase_uris?: ScryfallPurchaseUris;
-    /** This card’s rarity. */
+    /**
+     * This card’s rarity.
+     */
     rarity: ScryfallRarityLike;
-    /** An object providing URIs to this card’s listing on other Magic: The Gathering online resources. */
+    /**
+     * An object providing URIs to this card’s listing on other Magic: The Gathering online resources.
+     */
     related_uris: ScryfallRelatedUris;
-    /** The date this card was first released. */
+    /**
+     * The date this card was first released.
+     */
     released_at: IsoDate;
-    /** True if this card is a reprint. */
+    /**
+     * True if this card is a reprint.
+     */
     reprint: boolean;
-    /** A link to this card’s set on Scryfall’s website. */
+    /**
+     * A link to this card’s set on Scryfall’s website.
+     */
     scryfall_set_uri: Uri;
-    /** This card’s full set name. */
+    /**
+     * This card’s full set name.
+     */
     set_name: string;
-    /** A link to where you can begin paginating this card’s set on the Scryfall API. */
+    /**
+     * A link to where you can begin paginating this card’s set on the Scryfall API.
+     */
     set_search_uri: Uri;
-    /** The type of set this printing is in. */
+    /**
+     * The type of set this printing is in.
+     */
     set_type: SetTypeLike;
-    /** A link to this card’s set object on Scryfall’s API. */
+    /**
+     * A link to this card’s set object on Scryfall’s API.
+     */
     set_uri: Uri;
-    /** This card’s set code. */
+    /**
+     * This card’s set code.
+     */
     set: string;
-    /** This card’s Set object UUID. */
+    /**
+     * This card’s Set object UUID.
+     */
     set_id: Uuid;
-    /** True if this card is a Story Spotlight. */
+    /**
+     * True if this card is a Story Spotlight.
+     */
     story_spotlight: boolean;
-    /** True if the card is printed without text. */
+    /**
+     * True if the card is printed without text.
+     */
     textless: boolean;
-    /** The security stamp on this card, if any. */
+    /**
+     * The security stamp on this card, if any.
+     */
     security_stamp?: ScryfallSecurityStampLike;
-    /** Preview information for this print, if any. */
+    /**
+     * Preview information for this print, if any.
+     */
     preview?: PreviewInfo;
   } & VariationInfo;
 
@@ -298,7 +460,9 @@ export namespace ScryfallCardFields.Print {
    * These print fields only show up when a card is single-sided.
    */
   export type SingleSideOnly = {
-    /** The Scryfall ID for the card back design present on this card. */
+    /**
+     * The Scryfall ID for the card back design present on this card.
+     */
     card_back_id: Uuid;
   };
 
@@ -309,7 +473,9 @@ export namespace ScryfallCardFields.Print {
    * - Card face level for cards with two sides, e.g. a DFC or a reversible card.
    */
   export type CardSideSpecific = {
-    /** An object listing available imagery for this card. See the Card Imagery article for more information. */
+    /**
+     * An object listing available imagery for this card. See the Card Imagery article for more information.
+     */
     image_uris?: ScryfallImageUris;
   };
 
@@ -320,11 +486,17 @@ export namespace ScryfallCardFields.Print {
    * - Card face level for a multi-faced card.
    */
   export type CardFaceSpecific = {
-    /** The just-for-fun name printed on the card (such as for Godzilla series cards). */
+    /**
+     * The just-for-fun name printed on the card (such as for Godzilla series cards).
+     */
     flavor_name?: string;
-    /** The flavor text, if any. */
+    /**
+     * The flavor text, if any.
+     */
     flavor_text?: string;
-    /** This card’s watermark, if any. */
+    /**
+     * This card’s watermark, if any.
+     */
     watermark?: string;
   } & Localization;
 
@@ -332,11 +504,17 @@ export namespace ScryfallCardFields.Print {
    * These print fields only ever show up on a card face.
    */
   export type CardFaceOnly = {
-    /** The name of the illustrator of this card face. Newly spoiled cards may not have this field yet. */
+    /**
+     * The name of the illustrator of this card face. Newly spoiled cards may not have this field yet.
+     */
     artist?: string;
-    /** The ID of the illustrator of this card face. Newly spoiled cards may not have this field yet. */
+    /**
+     * The ID of the illustrator of this card face. Newly spoiled cards may not have this field yet.
+     */
     artist_id?: Uuid;
-    /** A unique identifier for the card face artwork that remains consistent across reprints. Newly spoiled cards may not have this field yet. */
+    /**
+     * A unique identifier for the card face artwork that remains consistent across reprints. Newly spoiled cards may not have this field yet.
+     */
     illustration_id?: Uuid;
   };
 
@@ -344,11 +522,17 @@ export namespace ScryfallCardFields.Print {
    * Printed data for localized cards.
    */
   export type Localization = {
-    /** The localized name printed on this card, if any. */
+    /**
+     * The localized name printed on this card, if any.
+     */
     printed_name?: string;
-    /** The localized text printed on this card, if any. */
+    /**
+     * The localized text printed on this card, if any.
+     */
     printed_text?: string;
-    /** The localized type line printed on this card, if any. */
+    /**
+     * The localized type line printed on this card, if any.
+     */
     printed_type_line?: string;
   };
 
@@ -362,9 +546,13 @@ export namespace ScryfallCardFields.Print {
   };
 
   type VariationInfo = {
-    /** Whether this card is a variation of another printing. */
+    /**
+     * Whether this card is a variation of another printing.
+     */
     variation: boolean;
-    /** The printing ID of the printing this card is a variation of. */
+    /**
+     * The printing ID of the printing this card is a variation of.
+     */
     variation_of?: Uuid;
   } & (
     | {

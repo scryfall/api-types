@@ -58,7 +58,9 @@ export namespace ScryfallObject {
    * The abstract base type of Scryfall objects.
    */
   export type Object<T extends ObjectType> = {
-    /** A content type for this object. */
+    /**
+     * A content type for this object.
+     */
     object: T | `${T}`;
   };
 }
