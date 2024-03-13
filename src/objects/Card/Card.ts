@@ -18,9 +18,9 @@ type Layout<T extends ScryfallLayout> = Pick<ScryfallCardFields.Core.All, "layou
  * - {@link ScryfallCard.AnySingleFaced} describes any card with one face and no `card_faces` property, e.g. {@link ScryfallCard.Normal Normal} or {@link ScryfallCard.Saga Saga}.
  * - {@link ScryfallCard.AnySingleSidedSplit} describes any card with multiple faces where both faces are on the front, e.g. {@link ScryfallCard.Adventure Adventure}, {@link ScryfallCard.Flip Flip}, or {@link ScryfallCard.Split Split}.
  * - {@link ScryfallCard.AnyDoubleSidedSplit} describes any card with multiple faces where the faces are on the front and back of the card, e.g.  {@link ScryfallCard.Transform Transform},  {@link ScryfallCard.ModalDfc ModalDfc}, or  {@link ScryfallCard.ReversibleCard ReversibleCard}.
- * - {@link ScryfallCard.AnySplit} is an alias for either of the above two split types.
- *
  * - {@link ScryfallCard.ReversibleCard} describes solely reversible cards.
+ * - {@link ScryfallCard.AnySplit} is an alias for either AnySingleSidedSplit or AnyDoubleSidedSplit.
+ * - {@link ScryfallCard.AnyMultiFaced} is an alias for AnySingleSidedSplit, AnyDoubleSidedSplit, or Reversible. This describes all layouts that can have a `card_faces` field.
  *
  * We recommend starting from `ScryfallCard.Any` to describe generic API responses, and you will need to do type narrowing to access more specific fields.
  *
@@ -35,7 +35,7 @@ type Layout<T extends ScryfallLayout> = Pick<ScryfallCardFields.Core.All, "layou
  * const mysteryCard: ScryfallCard.Any = getCard();
  *
  * if ("card_faces" in mysteryCard) {
- *   const mfc: ScryfallCard.AnySplit = mysteryCard;
+ *   const mfc: ScryfallCard.AnyMultiFaced = mysteryCard;
  * } else {
  *   const sfc: ScryfallCard.AnySingleFaced = mysteryCard;
  * }
@@ -188,4 +188,9 @@ export namespace ScryfallCard {
    * Since this may be of any layout, common fields are available, but layout-specific fields (e.g. card_faces) will be unavailable until you perform type narrowing on
    */
   export type Any = AnySingleFaced | AnySingleSidedSplit | AnyDoubleSidedSplit | ReversibleCard;
+
+  /**
+   * Any card that is multifaced: either a single or double sided split layout, or a reversible card.
+   */
+  export type AnyMultiFaced = AnySingleSidedSplit | AnyDoubleSidedSplit | ReversibleCard;
 }
