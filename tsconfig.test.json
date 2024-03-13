@@ -1,7 +1,4 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["__test__/**/*", "src/**/*"],
-  "compilerOptions": {
-    "noUnusedLocals": false, /* Enable error reporting when local variables aren't read. */
-  }
+  "include": ["./**/__test__/**/*", "src/**/*"],
 }

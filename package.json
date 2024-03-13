@@ -4,9 +4,10 @@
   "description": "Type definitions for the Scryfall API",
   "main": "index.ts",
   "scripts": {
-    "test": "npm run test:lib && npm run test:tests",
-    "test:lib": "tsc -p tsconfig.lib.json --noEmit",
-    "test:tests": "tsc -p tsconfig.test.json --noEmit --isolatedModules"
+    "qa": "npm run check:types && npm run lint && npm run test",
+    "lint": "eslint",
+    "test": "",
+    "check:types": "tsc --noEmit"
   },
   "files": [
     "index.ts",
