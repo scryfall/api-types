@@ -3,8 +3,8 @@ import { ScryfallLayout, ScryfallLayoutGroup } from "./values";
 import { ScryfallCardFace } from "./CardFace";
 import { ScryfallCardFields } from "./CardFields";
 
-type Layout<T extends ScryfallLayout> = Pick<ScryfallCardFields.Core.All, "layout"> & {
-  layout: T | `${T}`;
+type Layout<T extends `${ScryfallLayout}`> = Pick<ScryfallCardFields.Core.All, "layout"> & {
+  layout: `${T}`;
 };
 
 /**

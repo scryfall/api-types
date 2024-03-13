@@ -60,21 +60,21 @@ export namespace ScryfallLayoutGroup {
    * All layouts that represent a single-faced card, i.e. one with no card_faces property.
    */
   export const SingleFaced = [
-    ScryfallLayout.Normal,
-    ScryfallLayout.Meld,
-    ScryfallLayout.Leveler,
-    ScryfallLayout.Class,
-    ScryfallLayout.Saga,
-    ScryfallLayout.Mutate,
-    ScryfallLayout.Prototype,
-    ScryfallLayout.Battle,
-    ScryfallLayout.Planar,
-    ScryfallLayout.Scheme,
-    ScryfallLayout.Vanguard,
-    ScryfallLayout.Token,
-    ScryfallLayout.Emblem,
-    ScryfallLayout.Augment,
-    ScryfallLayout.Host,
+    `${ScryfallLayout.Normal}`,
+    `${ScryfallLayout.Meld}`,
+    `${ScryfallLayout.Leveler}`,
+    `${ScryfallLayout.Class}`,
+    `${ScryfallLayout.Saga}`,
+    `${ScryfallLayout.Mutate}`,
+    `${ScryfallLayout.Prototype}`,
+    `${ScryfallLayout.Battle}`,
+    `${ScryfallLayout.Planar}`,
+    `${ScryfallLayout.Scheme}`,
+    `${ScryfallLayout.Vanguard}`,
+    `${ScryfallLayout.Token}`,
+    `${ScryfallLayout.Emblem}`,
+    `${ScryfallLayout.Augment}`,
+    `${ScryfallLayout.Host}`,
   ] as const;
 
   /**
@@ -85,7 +85,11 @@ export namespace ScryfallLayoutGroup {
   /**
    * All layouts that represent a multi-faced card where both faces are on the front.
    */
-  export const SingleSidedSplit = [ScryfallLayout.Split, ScryfallLayout.Flip, ScryfallLayout.Adventure] as const;
+  export const SingleSidedSplit = [
+    `${ScryfallLayout.Split}`,
+    `${ScryfallLayout.Flip}`,
+    `${ScryfallLayout.Adventure}`,
+  ] as const;
 
   /**
    * A type describing {@link SingleSidedSplit}.
@@ -96,10 +100,10 @@ export namespace ScryfallLayoutGroup {
    * All layouts that represent a multi-faced card where the faces are on the front and back of the card.
    */
   export const DoubleSidedSplit = [
-    ScryfallLayout.Transform,
-    ScryfallLayout.ModalDfc,
-    ScryfallLayout.DoubleFacedToken,
-    ScryfallLayout.ArtSeries,
+    `${ScryfallLayout.Transform}`,
+    `${ScryfallLayout.ModalDfc}`,
+    `${ScryfallLayout.DoubleFacedToken}`,
+    `${ScryfallLayout.ArtSeries}`,
   ] as const;
 
   /**
