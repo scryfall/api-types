@@ -77,19 +77,6 @@ export namespace ScryfallLayoutGroup {
     | ScryfallLayout.Host;
 
   /**
-   * A type describing all layouts that represent a multi-faced card, i.e. one with a card_faces property.
-   */
-  export type MultiFaceType =
-    | ScryfallLayout.Split
-    | ScryfallLayout.Flip
-    | ScryfallLayout.Adventure
-    | ScryfallLayout.Transform
-    | ScryfallLayout.ModalDfc
-    | ScryfallLayout.DoubleFacedToken
-    | ScryfallLayout.ArtSeries
-    | ScryfallLayout.ReversibleCard;
-
-  /**
    * A card describing all layouts that represent a multi-faced card where both faces are on the front.
    */
   export type SingleSidedSplitType = ScryfallLayout.Split | ScryfallLayout.Flip | ScryfallLayout.Adventure;
@@ -101,6 +88,5 @@ export namespace ScryfallLayoutGroup {
     | ScryfallLayout.Transform
     | ScryfallLayout.ModalDfc
     | ScryfallLayout.DoubleFacedToken
-    | ScryfallLayout.ArtSeries
-    | ScryfallLayout.ReversibleCard;
+    | ScryfallLayout.ArtSeries;
 }
