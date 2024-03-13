@@ -58,6 +58,8 @@ export enum ScryfallLayout {
 export namespace ScryfallLayoutGroup {
   /**
    * All layouts that represent a single-faced card, i.e. one with no card_faces property.
+   *
+   * @see {@link SingleFacedType} for the type of this group.
    */
   export const SingleFaced = [
     `${ScryfallLayout.Normal}`,
@@ -78,12 +80,16 @@ export namespace ScryfallLayoutGroup {
   ] as const;
 
   /**
-   * A type describing {@link SingleFaced}.
+   * A type for all layouts that represent a single-faced card, i.e. one with no card_faces property.
+   *
+   * @see {@link SingleFaced} for an array version.
    */
   export type SingleFacedType = (typeof SingleFaced)[number];
 
   /**
    * All layouts that represent a multi-faced card where both faces are on the front.
+   *
+   * @see {@link SingleSidedSplitType} for the type of this group.
    */
   export const SingleSidedSplit = [
     `${ScryfallLayout.Split}`,
@@ -92,12 +98,17 @@ export namespace ScryfallLayoutGroup {
   ] as const;
 
   /**
-   * A type describing {@link SingleSidedSplit}.
+   * A type for all layouts that represent a multi-faced card where both faces are on the front.
+   *
+   * @see {@link SingleSidedSplit} for an array version.
+   *
    */
   export type SingleSidedSplitType = (typeof SingleSidedSplit)[number];
 
   /**
    * All layouts that represent a multi-faced card where the faces are on the front and back of the card.
+   *
+   * @see {@link DoubleSidedSplitType} for the type of this group.
    */
   export const DoubleSidedSplit = [
     `${ScryfallLayout.Transform}`,
@@ -107,7 +118,10 @@ export namespace ScryfallLayoutGroup {
   ] as const;
 
   /**
-   * A type describing {@link DoubleSidedSplit}.
+   * A type for all layouts that represent a multi-faced card where the faces are on the front and back of the card.
+   *
+   * @see {@link DoubleSidedSplit} for an array version.
+   *
    */
   export type DoubleSidedSplitType = (typeof DoubleSidedSplit)[number];
 }
