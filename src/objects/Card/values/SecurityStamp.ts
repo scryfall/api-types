@@ -6,5 +6,3 @@ export enum ScryfallSecurityStamp {
   Arena = "arena",
   Heart = "heart",
 }
-
-export type ScryfallSecurityStampLike = ScryfallSecurityStamp | `${ScryfallSecurityStamp}`;

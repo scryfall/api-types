@@ -1,6 +1,5 @@
 import { ScryfallObject } from "../Object";
-import { Uuid, Integer, Uri, IsoDate } from "../../internal";
-import { SetTypeLike } from "./values";
+import { SetType } from "./values";
 
 /**
  * Description of a Magic card set.
@@ -10,8 +9,10 @@ import { SetTypeLike } from "./values";
 export type ScryfallSet = ScryfallObject.Object<ScryfallObject.ObjectType.Set> & {
   /**
    * A unique ID for this set on Scryfall that will not change.
+   *
+   * @type UUID
    */
-  id: Uuid;
+  id: string;
   /**
    * The unique three to five-letter code for this set.
    */
@@ -26,8 +27,10 @@ export type ScryfallSet = ScryfallObject.Object<ScryfallObject.ObjectType.Set> &
   arena_code?: string;
   /**
    * This set’s ID on TCGplayer’s API, also known as the groupId.
+   *
+   * @type Integer
    */
-  tcgplayer_id?: Integer;
+  tcgplayer_id?: number;
   /**
    * The English name of the set.
    */
@@ -35,11 +38,13 @@ export type ScryfallSet = ScryfallObject.Object<ScryfallObject.ObjectType.Set> &
   /**
    * A computer-readable classification for this set. See below.
    */
-  set_type: SetTypeLike;
+  set_type: `${SetType}`;
   /**
    * The date the set was released or the first card was printed in the set (in GMT-8 Pacific time).
+   *
+   * @type IsoDate
    */
-  released_at?: IsoDate;
+  released_at?: string;
   /**
    * The block code for this set, if any.
    */
@@ -54,12 +59,16 @@ export type ScryfallSet = ScryfallObject.Object<ScryfallObject.ObjectType.Set> &
   parent_set_code?: string;
   /**
    * The number of cards in this set.
+   *
+   * @type Integer
    */
-  card_count: Integer;
+  card_count: number;
   /**
    * The denominator for the set’s printed collector numbers.
+   *
+   * @type Integer
    */
-  printed_size?: Integer;
+  printed_size?: number;
   /**
    * True if this set was only released in a video game.
    */
@@ -74,18 +83,26 @@ export type ScryfallSet = ScryfallObject.Object<ScryfallObject.ObjectType.Set> &
   nonfoil_only: boolean;
   /**
    * A link to this set’s permapage on Scryfall’s website.
+   *
+   * @type URI
    */
-  scryfall_uri: Uri;
+  scryfall_uri: string;
   /**
    * A link to this set object on Scryfall’s API.
+   *
+   * @type URI
    */
-  uri: Uri;
+  uri: string;
   /**
    * A URI to an SVG file for this set’s icon on Scryfall’s CDN. Hotlinking this image isn’t recommended, because it may change slightly over time. You should download it and use it locally for your particular user interface needs.
+   *
+   * @type URI
    */
-  icon_svg_uri: Uri;
+  icon_svg_uri: string;
   /**
    * A Scryfall API URI that you can request to begin paginating over the cards in this set.
+   *
+   * @type URI
    */
-  search_uri: Uri;
+  search_uri: string;
 };

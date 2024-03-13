@@ -1,5 +1,4 @@
 import { ScryfallObject } from "../Object";
-import { Integer } from "../../internal";
 
 /**
  * An error response from the Scryfall API.
@@ -11,8 +10,10 @@ import { Integer } from "../../internal";
 export type ScryfallError = ScryfallObject.Object<ScryfallObject.ObjectType.Error> & {
   /**
    * An integer HTTP status code for this error.
+   *
+   * @type Integer
    */
-  status: Integer;
+  status: number;
   /**
    * A computer-friendly string representing the appropriate HTTP status code.
    */

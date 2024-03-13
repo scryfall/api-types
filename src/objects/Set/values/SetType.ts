@@ -68,5 +68,3 @@ export enum SetType {
   /** A set that contains minigame card inserts from booster packs */
   Minigame = "minigame",
 }
-
-export type SetTypeLike = SetType | `${SetType}`;

@@ -8,6 +8,4 @@ export enum ScryfallColor {
   Colorless = "C",
 }
 
-export type ScryfallColorLike = ScryfallColor | `${ScryfallColor}`;
-
-export type ScryfallColors = ScryfallColorLike[];
+export type ScryfallColors = `${ScryfallColor}`[];

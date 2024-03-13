@@ -10,5 +10,3 @@ export enum ScryfallBorderColor {
   Silver = "silver",
   Gold = "gold",
 }
-
-export type ScryfallBorderColorLike = ScryfallBorderColor | `${ScryfallBorderColor}`;

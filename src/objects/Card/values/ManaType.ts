@@ -7,6 +7,4 @@ enum ScryfallManaType {
   Colorless = "C",
 }
 
-export type ScryfallManaTypeLike = ScryfallManaType | `${ScryfallManaType}`;
-
-export type ScryfallManaTypes = ScryfallManaTypeLike[];
+export type ScryfallManaTypes = `${ScryfallManaType}`[];

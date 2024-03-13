@@ -1,5 +1,4 @@
 import { ScryfallObject } from "../Object";
-import { Uri, Uuid } from "../../internal";
 
 /**
  * A related card entry.
@@ -7,8 +6,10 @@ import { Uri, Uuid } from "../../internal";
 export type ScryfallRelatedCard = ScryfallObject.Object<ScryfallObject.ObjectType.RelatedCard> & {
   /**
    * An unique ID for this card in Scryfall’s database.
+   *
+   * @type UUID
    */
-  id: Uuid;
+  id: string;
   /**
    * A field explaining what role this card plays in this relationship.
    */
@@ -23,6 +24,8 @@ export type ScryfallRelatedCard = ScryfallObject.Object<ScryfallObject.ObjectTyp
   type_line: string;
   /**
    * A URI where you can retrieve a full object describing this card on Scryfall’s API.
+   *
+   * @type URI
    */
-  uri: Uri;
+  uri: string;
 };

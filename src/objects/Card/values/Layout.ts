@@ -52,57 +52,76 @@ export enum ScryfallLayout {
   Case = "case",
 }
 
-export type ScryfallLayoutLike = ScryfallLayout | `${ScryfallLayout}`;
-
 /**
  * Groupings of layouts.
  */
 export namespace ScryfallLayoutGroup {
   /**
-   * A type describing all layouts that represent a single-faced card, i.e. one with no card_faces property.
+   * All layouts that represent a single-faced card, i.e. one with no card_faces property.
+   *
+   * @see {@link SingleFacedType} for the type of this group.
    */
-  export type SingleFaceType =
-    | ScryfallLayout.Normal
-    | ScryfallLayout.Meld
-    | ScryfallLayout.Leveler
-    | ScryfallLayout.Class
-    | ScryfallLayout.Saga
-    | ScryfallLayout.Mutate
-    | ScryfallLayout.Prototype
-    | ScryfallLayout.Battle
-    | ScryfallLayout.Planar
-    | ScryfallLayout.Scheme
-    | ScryfallLayout.Vanguard
-    | ScryfallLayout.Token
-    | ScryfallLayout.Emblem
-    | ScryfallLayout.Augment
-    | ScryfallLayout.Host;
+  export const SingleFaced = [
+    `${ScryfallLayout.Normal}`,
+    `${ScryfallLayout.Meld}`,
+    `${ScryfallLayout.Leveler}`,
+    `${ScryfallLayout.Class}`,
+    `${ScryfallLayout.Saga}`,
+    `${ScryfallLayout.Mutate}`,
+    `${ScryfallLayout.Prototype}`,
+    `${ScryfallLayout.Battle}`,
+    `${ScryfallLayout.Planar}`,
+    `${ScryfallLayout.Scheme}`,
+    `${ScryfallLayout.Vanguard}`,
+    `${ScryfallLayout.Token}`,
+    `${ScryfallLayout.Emblem}`,
+    `${ScryfallLayout.Augment}`,
+    `${ScryfallLayout.Host}`,
+  ] as const;
 
   /**
-   * A type describing all layouts that represent a multi-faced card, i.e. one with a card_faces property.
+   * A type for all layouts that represent a single-faced card, i.e. one with no card_faces property.
+   *
+   * @see {@link SingleFaced} for an array version.
    */
-  export type MultiFaceType =
-    | ScryfallLayout.Split
-    | ScryfallLayout.Flip
-    | ScryfallLayout.Adventure
-    | ScryfallLayout.Transform
-    | ScryfallLayout.ModalDfc
-    | ScryfallLayout.DoubleFacedToken
-    | ScryfallLayout.ArtSeries
-    | ScryfallLayout.ReversibleCard;
+  export type SingleFacedType = (typeof SingleFaced)[number];
 
   /**
-   * A card describing all layouts that represent a multi-faced card where both faces are on the front.
+   * All layouts that represent a multi-faced card where both faces are on the front.
+   *
+   * @see {@link SingleSidedSplitType} for the type of this group.
    */
-  export type SingleSidedSplitType = ScryfallLayout.Split | ScryfallLayout.Flip | ScryfallLayout.Adventure;
+  export const SingleSidedSplit = [
+    `${ScryfallLayout.Split}`,
+    `${ScryfallLayout.Flip}`,
+    `${ScryfallLayout.Adventure}`,
+  ] as const;
 
   /**
-   * A card describing all layouts that represent a multi-faced card where the faces are on the front and back of the card.
+   * A type for all layouts that represent a multi-faced card where both faces are on the front.
+   *
+   * @see {@link SingleSidedSplit} for an array version.
+   *
    */
-  export type DoubleSidedSplitType =
-    | ScryfallLayout.Transform
-    | ScryfallLayout.ModalDfc
-    | ScryfallLayout.DoubleFacedToken
-    | ScryfallLayout.ArtSeries
-    | ScryfallLayout.ReversibleCard;
+  export type SingleSidedSplitType = (typeof SingleSidedSplit)[number];
+
+  /**
+   * All layouts that represent a multi-faced card where the faces are on the front and back of the card.
+   *
+   * @see {@link DoubleSidedSplitType} for the type of this group.
+   */
+  export const DoubleSidedSplit = [
+    `${ScryfallLayout.Transform}`,
+    `${ScryfallLayout.ModalDfc}`,
+    `${ScryfallLayout.DoubleFacedToken}`,
+    `${ScryfallLayout.ArtSeries}`,
+  ] as const;
+
+  /**
+   * A type for all layouts that represent a multi-faced card where the faces are on the front and back of the card.
+   *
+   * @see {@link DoubleSidedSplit} for an array version.
+   *
+   */
+  export type DoubleSidedSplitType = (typeof DoubleSidedSplit)[number];
 }

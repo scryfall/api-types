@@ -1,12 +1,9 @@
 import { ScryfallObject } from "../Object";
-import { Uri, Uuid, IsoDate } from "../../internal";
 
 export enum ScryfallMigrationStrategy {
   Merge = "merge",
   Delete = "delete",
 }
-
-export type ScryfallMigrationStrategyLike = ScryfallMigrationStrategy | `${ScryfallMigrationStrategy}`;
 
 /**
  * A data migration.
@@ -14,29 +11,46 @@ export type ScryfallMigrationStrategyLike = ScryfallMigrationStrategy | `${Scryf
  * @see {@link https://scryfall.com/docs/api/migrations}
  */
 export type ScryfallMigration = ScryfallObject.Object<ScryfallObject.ObjectType.Migration> & {
-  /** A link to the current object on Scryfall's API */
-  uri: Uri;
-  /** This migration's unique UUID */
-  id: Uuid;
-  /** The date this migration was performed */
-  performed_at: IsoDate;
-  /** A computer-readable indicator of the migration strategy. */
-  migration_strategy: ScryfallMigrationStrategyLike;
-  /** The `id` of the affected API Card object */
-  old_scryfall_id: Uuid;
-  /** The replacement `id` of the API Card object if this is a `merge` */
-  new_scryfall_id?: Uuid;
-  /** A note left by the Scryfall team about this migration */
+  /**
+   * A link to the current object on Scryfall's API
+   *
+   * @type URI
+   */
+  uri: string;
+  /**
+   * This migration's unique UUID
+   *
+   * @type UUID
+   */
+  id: string;
+  /**
+   * The date this migration was performed
+   *
+   * @type IsoDate
+   */
+  performed_at: string;
+  /**
+   * A computer-readable indicator of the migration strategy.
+   */
+  migration_strategy: `${ScryfallMigrationStrategy}`;
+  /**
+   * The `id` of the affected API Card object
+   *
+   * @type UUID
+   */
+  old_scryfall_id: string;
+  /**
+   * The replacement `id` of the API Card object if this is a `merge`
+   *
+   * @type UUID
+   */
+  new_scryfall_id?: string;
+  /**
+   * A note left by the Scryfall team about this migration
+   */
   note?: string;
-  /** Additional context Scryfall has provided for this migration, designed to be human-read only */
+  /**
+   * Additional context Scryfall has provided for this migration, designed to be human-read only
+   */
   metadata?: object;
-} & (
-    | {
-        migration_strategy: ScryfallMigrationStrategy.Merge | `${ScryfallMigrationStrategy.Merge}`;
-        new_scryfall_id: Uuid;
-      }
-    | {
-        migration_strategy: ScryfallMigrationStrategy.Delete | `${ScryfallMigrationStrategy.Delete}`;
-        new_scryfall_id?: undefined;
-      }
-  );
+};
