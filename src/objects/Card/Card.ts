@@ -16,9 +16,10 @@ type Layout<T extends ScryfallLayout> = Pick<ScryfallCardFields.Core.All, "layou
  * Then various groups exist to help describe cards of indeterminate layout:
  * - {@link ScryfallCard.Any} describes any card at all. Think of it as like `any` but for cards.
  * - {@link ScryfallCard.AnySingleFaced} describes any card with one face and no `card_faces` property, e.g. {@link ScryfallCard.Normal Normal} or {@link ScryfallCard.Saga Saga}.
- * - {@link ScryfallCard.AnySplit} describes any split card: either a single-sided split or a double-sided split.
  * - {@link ScryfallCard.AnySingleSidedSplit} describes any card with multiple faces where both faces are on the front, e.g. {@link ScryfallCard.Adventure Adventure}, {@link ScryfallCard.Flip Flip}, or {@link ScryfallCard.Split Split}.
  * - {@link ScryfallCard.AnyDoubleSidedSplit} describes any card with multiple faces where the faces are on the front and back of the card, e.g.  {@link ScryfallCard.Transform Transform},  {@link ScryfallCard.ModalDfc ModalDfc}, or  {@link ScryfallCard.ReversibleCard ReversibleCard}.
+ * - {@link ScryfallCard.AnySplit} is an alias for either of the above two split types.
+ *
  * - {@link ScryfallCard.ReversibleCard} describes solely reversible cards.
  *
  * We recommend starting from `ScryfallCard.Any` to describe generic API responses, and you will need to do type narrowing to access more specific fields.
