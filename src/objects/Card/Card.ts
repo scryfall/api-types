@@ -10,7 +10,6 @@ type Layout<T extends `${ScryfallLayout}`> = Pick<ScryfallCardFields.Core.All, "
 /**
  * A collection of types representing Scryfall cards of each possible layout.
  *
- *
  * This collection is focused around four core varieties of cards:
  * - {@link ScryfallCard.AnySingleFaced} describes any card with one face and no `card_faces` property, e.g. {@link ScryfallCard.Normal Normal} or {@link ScryfallCard.Saga Saga}.
  * - {@link ScryfallCard.AnySingleSidedSplit} describes any card with multiple faces where both faces are on the front, e.g. {@link ScryfallCard.Adventure Adventure}, {@link ScryfallCard.Flip Flip}, or {@link ScryfallCard.Split Split}.
@@ -25,8 +24,6 @@ type Layout<T extends `${ScryfallLayout}`> = Pick<ScryfallCardFields.Core.All, "
  * There is also an alias for each possible layout: {@link ScryfallCard.Normal}, {@link ScryfallCard.Transform}, etc.
  *
  * We recommend starting from {@link ScryfallCard.Any} to describe generic API responses, and you will need to do type narrowing to access more specific fields.
- *
- * 
  *
  * @example // Type narrowing by layout
  * const mysteryCard: ScryfallCard.Any = getCard();
