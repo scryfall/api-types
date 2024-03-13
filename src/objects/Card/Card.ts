@@ -22,9 +22,11 @@ type Layout<T extends `${ScryfallLayout}`> = Pick<ScryfallCardFields.Core.All, "
  * - {@link ScryfallCard.AnySplit} is an alias for either AnySingleSidedSplit or AnyDoubleSidedSplit.
  * - {@link ScryfallCard.AnyMultiFaced} is an alias for AnySingleSidedSplit, AnyDoubleSidedSplit, or Reversible. This describes all layouts that can have a `card_faces` field.
  *
+ * There is also an alias for each possible layout: {@link ScryfallCard.Normal}, {@link ScryfallCard.Transform}, etc.
+ *
  * We recommend starting from {@link ScryfallCard.Any} to describe generic API responses, and you will need to do type narrowing to access more specific fields.
  *
- * An individual type additionally exists for each possible layout: {@link ScryfallCard.Normal}, {@link ScryfallCard.Transform}, etc, which is like the variety they belong to but with the `layout` field guaranteed to be a specific value.
+ * 
  *
  * @example // Type narrowing by layout
  * const mysteryCard: ScryfallCard.Any = getCard();
