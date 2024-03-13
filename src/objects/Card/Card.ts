@@ -121,27 +121,22 @@ export namespace ScryfallCard {
     ScryfallCardFields.Print.RootProperties &
     ScryfallCardFields.Print.CardSpecific;
 
-  type SingleSidedSplit = MultiFace<ScryfallCardFace.Split> &
-    Layout<ScryfallLayoutGroup.SingleSidedSplitType> &
-    ScryfallCardFields.Gameplay.CardSideSpecific &
-    ScryfallCardFields.Print.CardSideSpecific &
-    ScryfallCardFields.Print.SingleSideOnly;
-
-  type DoubleSidedSplit = MultiFace<ScryfallCardFace.DoubleSided> & Layout<ScryfallLayoutGroup.DoubleSidedSplitType>;
-
   /**
    * Any split card layout.
    */
-  export type AnySplit = SingleSidedSplit | DoubleSidedSplit;
+  export type AnySplit = AnySingleSidedSplit | AnyDoubleSidedSplit;
 
   /**
    * Any single-sided split card. These all have `card_faces`, and the faces are both on the front.
    *
    * Examples: {@link ScryfallLayout.Split}, {@link ScryfallLayout.Flip}, {@link ScryfallLayout.Adventure}.
    */
-  export type AnySingleSidedSplit = Layout<ScryfallLayoutGroup.SingleSidedSplitType> &
-    SingleSidedSplit &
-    ScryfallCardFields.Gameplay.CombatStats;
+  export type AnySingleSidedSplit = MultiFace<ScryfallCardFace.Split> &
+    Layout<ScryfallLayoutGroup.SingleSidedSplitType> &
+    ScryfallCardFields.Gameplay.CardSideSpecific &
+    ScryfallCardFields.Gameplay.CombatStats &
+    ScryfallCardFields.Print.CardSideSpecific &
+    ScryfallCardFields.Print.SingleSideOnly;
 
   /** A card with the Split layout. */
   export type Split = AnySingleSidedSplit & Layout<ScryfallLayout.Split>;
@@ -157,7 +152,8 @@ export namespace ScryfallCard {
    *
    * Examples: {@link ScryfallLayout.Transform}, {@link ScryfallLayout.ModalDfc}, {@link ScryfallLayout.DoubleFacedToken}.
    */
-  export type AnyDoubleSidedSplit = Layout<ScryfallLayoutGroup.DoubleSidedSplitType> & DoubleSidedSplit;
+  export type AnyDoubleSidedSplit = MultiFace<ScryfallCardFace.DoubleSided> &
+    Layout<ScryfallLayoutGroup.DoubleSidedSplitType>;
 
   /** A card with the Transform layout. */
   export type Transform = AnyDoubleSidedSplit & Layout<ScryfallLayout.Transform>;
