@@ -122,7 +122,7 @@ export namespace ScryfallCard {
     ScryfallCardFields.Print.CardSpecific;
 
   /**
-   * Any split card layout.
+   * Any split layout, either single sided or double sided. These will both have `card_faces`.
    */
   export type AnySplit = AnySingleSidedSplit | AnyDoubleSidedSplit;
 
