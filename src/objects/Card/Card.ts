@@ -11,18 +11,20 @@ type Layout<T extends ScryfallLayout> = Pick<ScryfallCardFields.Core.All, "layou
  * A collection of types representing Scryfall cards of each possible layout.
  *
  *
- * An individual type exists for each possible layout: {@link ScryfallCard.Normal}, {@link ScryfallCard.Transform}, etc.
- *
- * Then various groups exist to help describe cards of indeterminate layout:
- * - {@link ScryfallCard.Any} describes any card at all. Think of it as like `any` but for cards.
+ * This collection is focused around four core varieties of cards:
  * - {@link ScryfallCard.AnySingleFaced} describes any card with one face and no `card_faces` property, e.g. {@link ScryfallCard.Normal Normal} or {@link ScryfallCard.Saga Saga}.
  * - {@link ScryfallCard.AnySingleSidedSplit} describes any card with multiple faces where both faces are on the front, e.g. {@link ScryfallCard.Adventure Adventure}, {@link ScryfallCard.Flip Flip}, or {@link ScryfallCard.Split Split}.
  * - {@link ScryfallCard.AnyDoubleSidedSplit} describes any card with multiple faces where the faces are on the front and back of the card, e.g.  {@link ScryfallCard.Transform Transform},  {@link ScryfallCard.ModalDfc ModalDfc}, or  {@link ScryfallCard.ReversibleCard ReversibleCard}.
  * - {@link ScryfallCard.ReversibleCard} describes solely reversible cards.
+ *
+ * It also provides broader groupings:
+ * - {@link ScryfallCard.Any} describes any card at all. Think of it as like `any` but for cards.
  * - {@link ScryfallCard.AnySplit} is an alias for either AnySingleSidedSplit or AnyDoubleSidedSplit.
  * - {@link ScryfallCard.AnyMultiFaced} is an alias for AnySingleSidedSplit, AnyDoubleSidedSplit, or Reversible. This describes all layouts that can have a `card_faces` field.
  *
  * We recommend starting from `ScryfallCard.Any` to describe generic API responses, and you will need to do type narrowing to access more specific fields.
+ *
+ * An individual type additionally exists for each possible layout: {@link ScryfallCard.Normal}, {@link ScryfallCard.Transform}, etc, which is like the variety they belong to but with the `layout` field guaranteed to be a specific value.
  *
  * @example // Type narrowing by layout
  * const mysteryCard: ScryfallCard.Any = getCard();
@@ -56,7 +58,7 @@ export namespace ScryfallCard {
    * Examples: {@link ScryfallLayout.Normal}, {@link ScryfallLayout.Mutate}, {@link ScryfallLayout.Token}.
    */
   export type AnySingleFaced = AbstractCard &
-    Layout<ScryfallLayoutGroup.SingleFaceType> &
+    Layout<ScryfallLayoutGroup.SingleFacedType> &
     ScryfallCardFields.Gameplay.RootProperties &
     ScryfallCardFields.Gameplay.CardSpecific &
     ScryfallCardFields.Gameplay.CardFaceSpecific &

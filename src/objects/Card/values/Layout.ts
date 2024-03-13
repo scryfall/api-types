@@ -57,36 +57,53 @@ export enum ScryfallLayout {
  */
 export namespace ScryfallLayoutGroup {
   /**
-   * A type describing all layouts that represent a single-faced card, i.e. one with no card_faces property.
+   * All layouts that represent a single-faced card, i.e. one with no card_faces property.
    */
-  export type SingleFaceType =
-    | ScryfallLayout.Normal
-    | ScryfallLayout.Meld
-    | ScryfallLayout.Leveler
-    | ScryfallLayout.Class
-    | ScryfallLayout.Saga
-    | ScryfallLayout.Mutate
-    | ScryfallLayout.Prototype
-    | ScryfallLayout.Battle
-    | ScryfallLayout.Planar
-    | ScryfallLayout.Scheme
-    | ScryfallLayout.Vanguard
-    | ScryfallLayout.Token
-    | ScryfallLayout.Emblem
-    | ScryfallLayout.Augment
-    | ScryfallLayout.Host;
+  export const SingleFaced = [
+    ScryfallLayout.Normal,
+    ScryfallLayout.Meld,
+    ScryfallLayout.Leveler,
+    ScryfallLayout.Class,
+    ScryfallLayout.Saga,
+    ScryfallLayout.Mutate,
+    ScryfallLayout.Prototype,
+    ScryfallLayout.Battle,
+    ScryfallLayout.Planar,
+    ScryfallLayout.Scheme,
+    ScryfallLayout.Vanguard,
+    ScryfallLayout.Token,
+    ScryfallLayout.Emblem,
+    ScryfallLayout.Augment,
+    ScryfallLayout.Host,
+  ] as const;
 
   /**
-   * A card describing all layouts that represent a multi-faced card where both faces are on the front.
+   * A type describing {@link SingleFaced}.
    */
-  export type SingleSidedSplitType = ScryfallLayout.Split | ScryfallLayout.Flip | ScryfallLayout.Adventure;
+  export type SingleFacedType = (typeof SingleFaced)[number];
 
   /**
-   * A card describing all layouts that represent a multi-faced card where the faces are on the front and back of the card.
+   * All layouts that represent a multi-faced card where both faces are on the front.
    */
-  export type DoubleSidedSplitType =
-    | ScryfallLayout.Transform
-    | ScryfallLayout.ModalDfc
-    | ScryfallLayout.DoubleFacedToken
-    | ScryfallLayout.ArtSeries;
+  export const SingleSidedSplit = [ScryfallLayout.Split, ScryfallLayout.Flip, ScryfallLayout.Adventure] as const;
+
+  /**
+   * A type describing {@link SingleSidedSplit}.
+   */
+  export type SingleSidedSplitType = (typeof SingleSidedSplit)[number];
+
+  /**
+   * All layouts that represent a multi-faced card where the faces are on the front and back of the card.
+   */
+  export const DoubleSidedSplit = [
+    ScryfallLayout.Transform,
+    ScryfallLayout.ModalDfc,
+    ScryfallLayout.DoubleFacedToken,
+    ScryfallLayout.ArtSeries,
+  ] as const;
+
+  /**
+   * A type describing {@link DoubleSidedSplit}.
+   */
+  export type DoubleSidedSplitType = (typeof DoubleSidedSplit)[number];
 }
