@@ -45,4 +45,6 @@ export enum ScryfallFrameEffect {
   FanDfc = "fandfc",
   /** The cards have the Upside Down transforming marks */
   UpsidedownDfc = "upsidedowndfc",
+  /** The cards have Spree asterisks */
+  Spree = "spree",
 }

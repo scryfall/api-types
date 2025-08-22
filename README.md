@@ -88,6 +88,8 @@ All primary types and values are prefixed with `Scryfall` to avoid conflict with
 
 Enum fields are described both in terms of an enum and a set of strings in order to give you the option of interacting with that field with either one.
 
+In order to use the provided enum values in runtime code (i.e. outside of just compile-time type checking), you may need to configure your project's build pipeline/module bundler to ensure it is transpiling the Typescript source code in the `@scryfall/api-types` package. Many module bundlers exclude `node_modules` from Typescript transpilation for performance reasons, but provide methods to force inclusion of specific paths (e.g. Webpack's `module.rules`, or Next.js's `transpilePackages` configurations).
+
 [semver]: https://semver.org/
 [api]: https://scryfall.com/docs/api
 [issues]: https://github.com/scryfall/api-types/issues

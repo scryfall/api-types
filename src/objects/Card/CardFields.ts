@@ -265,6 +265,12 @@ export namespace ScryfallCardFields.Gameplay {
      */
     edhrec_rank?: number;
     /**
+     * True if this card is on the Commander Game Changer list.
+     *
+     * @see {@link https://mtg.wiki/page/Commander_(format)/Game_Changers}
+     */
+    game_changer?: boolean;
+    /**
      * An array of keywords that this card uses, such as 'Flying' and 'Cumulative upkeep'.
      */
     keywords: string[];
